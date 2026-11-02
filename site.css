@@ -226,3 +226,13 @@ footer a:hover { color: #f6f1e3; }
   html { scroll-behavior: auto; }
 }
 @media (prefers-reduced-transparency: reduce) { .nav, .menu, .tile, .lot, .b-stat { backdrop-filter: none; -webkit-backdrop-filter: none; } .nav { background: #131209; } .nav.on-light { background: #f7f6f1; } }
+@media (max-width: 599px) { .hero-role { display: none; } }
+
+/* Education tile */
+.t-edu { display: grid; gap: var(--s-100); align-content: start; }
+.t-edu .mono { margin-top: var(--s-300); font-size: 14px; line-height: 20px; letter-spacing: .1em; text-transform: uppercase; color: #f7c548; }
+.t-edu h4 { margin-top: var(--s-75); font-size: 56px; line-height: 1; }
+@media (min-width: 768px) { .t-edu h4 { font-size: 80px; } }
+.tile-link { display: inline-flex; align-items: center; gap: var(--s-75); margin-top: var(--s-200); font-size: 16px; line-height: 24px; font-weight: 600; color: #f7c548; transition: gap 500ms var(--ease); }
+.tile-link:hover { gap: var(--s-100); }
+.tile-link i { font-size: 18px; }

@@ -38,3 +38,4 @@
 .build-sticky { --ink: #131209; --ink-mute: #66624f; --brass: #a86f00; --line: #e1ded2; color: #131209; }
 .build-card h3, .tl-card h3, .beat h2, .pct b, .pct span { font-family: var(--display); font-weight: 400; }
 .build-card h3 { font-size: 36px; line-height: 36px; }
+@media (max-width: 599px) { .build-card { padding: var(--s-200); left: var(--s-200); bottom: var(--s-200); width: calc(100% - 32px); } .build-card h3 { font-size: 28px; line-height: 28px; } .build-card p:last-child { font-size: 14px; line-height: 20px; } }
