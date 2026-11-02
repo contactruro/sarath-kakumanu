@@ -437,3 +437,16 @@ h1, h2, h3, .h2, .stage h1 { letter-spacing: -.025em; }
 @media (prefers-reduced-transparency: reduce) { .lot, .card, .dev-step, .quote, .stat, .chip, .dev-scene { background: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; } }
 @media (max-width: 899px) { .dev { display: block; } .dev-steps { margin-top: var(--s-300); } .dev-scene { height: 44svh; } }
 #territory, #work, #connect, #story { overflow: clip; }
+
+/* No gradients anywhere: solid hero heading, no colour glows */
+.stage h1 { background-image: none; -webkit-background-clip: border-box; background-clip: border-box; color: #fff8e7; }
+#territory::before, #work::before, #connect::before, #story::before,
+#territory::after, #work::after, #connect::after { display: none; }
+
+/* Story video on the right */
+.story-video { margin: 0; position: relative; order: 2; border-radius: 16px; overflow: hidden; border: 1px solid #fff; background: #fff; box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 24px 56px rgba(22,20,15,.12); }
+.story-video video { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+.story-video figcaption { position: absolute; left: var(--s-200); right: var(--s-200); bottom: var(--s-200); display: flex; justify-content: space-between; gap: var(--s-200); padding: var(--s-100) var(--s-200); border-radius: 12px; background: rgba(255,255,255,.62); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255,255,255,.9); font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-mute); }
+.story-video figcaption span:first-child { color: var(--brass); }
+@media (min-width: 900px) { .story-grid { grid-template-columns: 6fr 5fr; align-items: center; } .story-video { position: sticky; top: 96px; } .story-copy { order: 1; } }
+@media (max-width: 899px) { .story-video { order: 0; } }
