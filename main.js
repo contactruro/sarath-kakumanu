@@ -52,7 +52,7 @@
   const sio = new IntersectionObserver((es) => es.forEach(e => {
     if (e.isIntersecting) links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id));
   }), { rootMargin: '-45% 0px -50% 0px' });
-  $$('#about, #journey, #education, #press, #work, #territory, #faq, #connect').forEach(s => sio.observe(s));
+  $$('#top, #education, #press, #work, #territory, #faq, #connect').forEach(s => sio.observe(s));
 
   // YouTube click to load: no third party request until the visitor presses play
   $$('.yt-btn').forEach(btn => btn.addEventListener('click', () => {
@@ -64,6 +64,4 @@
     btn.replaceWith(f);
   }));
 
-  const v = $('.hero-video');
-  if (v && matchMedia('(prefers-reduced-motion: reduce)').matches) v.removeAttribute('autoplay'), v.pause();
 })();

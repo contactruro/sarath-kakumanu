@@ -8,7 +8,7 @@
 <meta property="og:title" content="Sarath Kakumanu | Architect, builder and education technologist">
 <meta property="og:description" content="He built almost 3 million square feet in Chennai. Now he is turning NCERT textbooks into KATBOOKs.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/chennai-poster.jpg">
+<meta property="og:image" content="assets/india-world.webp">
 <meta name="theme-color" content="#131209">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131209'/%3E%3Cpath d='M14 50V28L32 14l18 14v22H38V36H26v14z' fill='%23f7c548'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,7 @@
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="scene.css">
+<link rel="stylesheet" href="world.css">
 <link rel="stylesheet" href="build.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Sarath Kakumanu","jobTitle":"Founder, Pioneer Group and UEducate Global","description":"Architect with over five decades of experience. Built almost 3 million square feet of premium commercial and residential projects in Tamil Nadu and Andhra Pradesh. Developer of KWALL wall panels. Founder of UEducate Global, the company behind the KATBOOK digital textbook format.","alumniOf":"University of Madras","homeLocation":{"@type":"Place","name":"Chennai, India"},"sameAs":["https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/"]}
@@ -29,7 +30,7 @@
   <div class="nav-bar wrap">
     <a class="brand" href="#top" aria-label="Sarath Kakumanu, home">Sarath Kakumanu</a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#about">About</a><a href="#journey">Journey</a><a href="#education">Education</a><a href="#press">Press</a><a href="#work">Work</a><a href="#territory">Territory</a><a href="#faq">FAQ</a>
+      <a href="#about">About</a><a href="#top">Journey</a><a href="#education">Education</a><a href="#press">Press</a><a href="#work">Work</a><a href="#territory">Territory</a><a href="#faq">FAQ</a>
     </nav>
     <a class="nav-cta" href="#connect">Connect</a>
     <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
@@ -38,7 +39,7 @@
 <div class="menu" id="menu" aria-hidden="true">
   <ul>
     <li><a href="#about"><span>About</span></a></li>
-    <li><a href="#journey"><span>Journey</span></a></li>
+    <li><a href="#top"><span>Journey</span></a></li>
     <li><a href="#education"><span>Education</span></a></li>
     <li><a href="#press"><span>Press</span></a></li>
     <li><a href="#work"><span>Work</span></a></li>
@@ -50,29 +51,33 @@
 
 <main id="main">
 
-<!-- HERO -->
-<section class="hero" id="top" data-nav="dark">
-  <div class="hero-sticky">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/chennai-poster.jpg" aria-label="Aerial footage of Chennai">
-      <source src="assets/chennai.mp4" type="video/mp4">
-    </video>
-    <div class="hero-shade" id="heroShade"></div>
+<!-- WORLD HERO -->
+<section class="world" id="top" data-nav="dark" aria-label="Sarath Kakumanu, a guided journey through his career">
+  <div class="world-sticky" id="worldStage">
+    <div class="cam" id="cam">
+      <img class="art" id="art" src="assets/india-world.webp" alt="Illustrated vista of India at sunset: the Red Fort, a southern temple tower, the Taj Mahal, a hill fort and a lake, with Sarath Kakumanu standing on stone steps in the foreground" width="1712" height="919">
+      <div class="night-tint"></div>
+    </div>
+    <div class="world-shade" id="worldShade"></div>
 
-    <div class="hero-intro wrap" id="heroIntro">
-      <p class="eyebrow">Architect · Builder · Founder, UEducate Global</p>
-      <p class="hero-title">He built Chennai's skyline. Now he is rebuilding the classroom.</p>
-      <p class="hero-sub">After almost 3 million square feet of real estate, Sarath Kakumanu is turning NCERT textbooks into interactive KATBOOKs for students across India.</p>
-      <div class="hero-cta">
-        <a class="btn btn-gold" href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i>Connect with Sarath</a>
-        <a class="btn btn-line" href="#education">See the NCERT work</a>
+    <div class="w-title" id="wTitle">
+      <div class="wrap">
+        <p class="eyebrow">Architect · Builder · Founder, UEducate Global</p>
+        <p class="w-head">He built Chennai's skyline. Now he is rebuilding the <span class="hl">classroom.</span></p>
       </div>
     </div>
 
-    <h1 class="hero-name" id="heroName"><span class="nm nm-l">Sarath</span><span class="nm nm-r">Kakumanu</span></h1>
-    <img class="hero-portrait" id="heroPortrait" src="assets/sarath.png" alt="Sarath Kakumanu, architect and founder of Pioneer Group and UEducate Global, in a dark blazer with arms crossed">
-    <div class="hero-role mono" id="heroRole"><span>Pioneer Group · UEducate Global</span><span>Chennai · Since 1983</span></div>
-    <span class="scrollcue mono" id="heroCue">Scroll <i class="ph ph-arrow-down"></i></span>
+    <h1 class="w-name" id="wName"><span class="l">Sarath</span><span class="r">Kakumanu</span></h1>
+    <img class="w-portrait" id="wPortrait" src="assets/sarath.png" alt="Sarath Kakumanu, architect and founder of Pioneer Group and UEducate Global, in a dark blazer with arms crossed">
+
+    <article class="w-card" id="wCard" aria-live="polite"></article>
+
+    <div class="w-ctrl"><button class="w-btn" id="wTime" type="button" aria-pressed="false"><i class="ph ph-moon"></i><span>Night</span></button></div>
+    <ol class="w-dots" id="wDots" aria-label="Chapters"></ol>
+    <div class="w-map" id="wMap" aria-hidden="true"><img src="assets/india-world.webp" alt=""><i class="view"></i></div>
+    <span class="w-cue mono" id="wCue">Click a landmark or scroll to fly in <i class="ph ph-arrow-down"></i></span>
   </div>
+  <ol class="tour-list" aria-label="His story in chapters"></ol>
 </section>
 
 <!-- MARQUEE -->
@@ -151,34 +156,10 @@
   </div>
 </section>
 
-<!-- JOURNEY -->
-<section class="section journey" id="journey" data-nav="light">
-  <div class="wrap">
-    <p class="label reveal"><span class="mono">03</span>Journey</p>
-    <h2 class="display reveal" style="--d:100ms">From blueprints to classrooms in forty three years.</h2>
-    <p class="lead reveal" style="--d:200ms">From Pioneer Group in 1983 to an NCERT partnership in 2025, every chapter added another way of building.</p>
-    <ol class="timeline" id="timeline">
-      <li class="tl reveal"><span class="yr mono">1983</span><div class="tl-card"><h3>Pioneer Group</h3><p>Managing Director in Chennai, in construction management. He leads it today.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">1984</span><div class="tl-card"><h3>Apple Advertising and Marketing</h3><p>Managing Director.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">1992</span><div class="tl-card"><h3>Software begins</h3><p>The group enters software with Construction Management Software, built for every part of the construction industry, according to UEducate.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">1993</span><div class="tl-card"><h3>Sudarshan Hotels and Sarath Hotels</h3><p>Director of both hotel companies.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">1996</span><div class="tl-card"><h3>Kakumanu Sudharsan Builders</h3><p>Director of Operations.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">2001</span><div class="tl-card"><h3>The group takes shape</h3><p>Pioneer Technical Services, Pioneer Textile Machinery, Kakumanu Developers, Geetha Subbiah Engineers and Builders, Tirumal Builders and a run of hotels, including Hotel Temple View and Velavan Hotels.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">2004</span><div class="tl-card"><h3>Resorts, developers and builders</h3><p>PAN Resorts in 2003, then Ajay Developers, Arun Developers, Beena Hotels and Builders and Sri Subbiah Engineers and Builders in 2004.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">2012</span><div class="tl-card"><h3>KPOST and KSMACC</h3><p>Communication platforms: KPOST for open communication and KSMACC for closed communication inside organisations.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">2014</span><div class="tl-card"><h3>Ritestone Solutions and KWALL</h3><p>Management Director. The year he developed KWALL lightweight hollow core wall panels.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">2015</span><div class="tl-card"><h3>KPOST Software</h3><p>Director, KPOST Software Private Limited.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">2020</span><div class="tl-card"><h3>UEducate digital ecosystem</h3><p>A patented digital ecosystem for education, according to the company, built around digital books, campus management and learning.</p></div></li>
-      <li class="tl reveal"><span class="yr mono">2023</span><div class="tl-card"><h3>Ueducate Global</h3><p>Founder and Managing Director of an education company in Chennai, Tamil Nadu.</p></div></li>
-    <li class="tl reveal"><span class="yr mono">2025</span><div class="tl-card"><h3>NCERT signs an MoU with UEducate</h3><p>NCERT agrees to convert its textbooks into KATBOOKs, with pilots in select states followed by nationwide rollout over 18 months.</p></div></li>
-    </ol>
-  </div>
-</section>
-
 <!-- EDUCATION -->
 <section class="section edu" id="education" data-nav="dark">
   <div class="wrap">
-    <p class="label reveal"><span class="mono">04</span>Education</p>
+    <p class="label reveal"><span class="mono">03</span>Education</p>
     <h2 class="display reveal" style="--d:100ms">From skylines to classrooms.</h2>
     <p class="lead reveal" style="--d:200ms">Sarath leads UEducate Global, the Chennai company behind KATBOOK, a digital book format that wraps every textbook in videos, 3D models, virtual labs and AI tools.</p>
 
@@ -215,7 +196,7 @@
 <!-- PRESS -->
 <section class="section press" id="press" data-nav="light">
   <div class="wrap">
-    <p class="label reveal"><span class="mono">05</span>Press</p>
+    <p class="label reveal"><span class="mono">04</span>Press</p>
     <h2 class="display reveal" style="--d:100ms">In the media.</h2>
     <p class="lead reveal" style="--d:200ms">A live KATBOOK demo with Sarath, and the coverage of the NCERT partnership.</p>
     <div class="press-grid">
@@ -238,7 +219,7 @@
 <!-- WORK -->
 <section class="section work" id="work" data-nav="dark">
   <div class="wrap">
-    <p class="label reveal"><span class="mono">06</span>What he does</p>
+    <p class="label reveal"><span class="mono">05</span>What he does</p>
     <h2 class="display reveal" style="--d:100ms">Design, build and invent, all under one roof.</h2>
     <div class="build" id="build">
       <div class="build-sticky">
@@ -280,7 +261,7 @@
 <!-- TERRITORY -->
 <section class="section terr" id="territory" data-nav="light">
   <div class="wrap">
-    <p class="label reveal"><span class="mono">07</span>Territory</p>
+    <p class="label reveal"><span class="mono">06</span>Territory</p>
     <h2 class="display reveal" style="--d:100ms">Chennai, mapped one neighbourhood at a time.</h2>
     <p class="lead reveal" style="--d:200ms">Eight corners of the city that shape his thinking. Coordinates are the real centre of each neighbourhood.</p>
     <ul class="plots">
@@ -300,7 +281,7 @@
 <!-- FAQ -->
 <section class="section faq" id="faq" data-nav="light">
   <div class="wrap">
-    <p class="label reveal"><span class="mono">08</span>Questions</p>
+    <p class="label reveal"><span class="mono">07</span>Questions</p>
     <h2 class="display reveal" style="--d:100ms">What people ask before they reach out.</h2>
     <div class="faq-list reveal">
       <details><summary>Who is Sarath Kakumanu?<i class="ph ph-plus"></i></summary><p>An architect by training, with a bachelor's from the University of Madras. He founded Pioneer Group in Chennai and later founded UEducate Global, which works with NCERT on digital textbooks.</p></details>
@@ -317,7 +298,7 @@
 <!-- CONNECT -->
 <section class="section connect" id="connect" data-nav="dark">
   <div class="wrap">
-    <p class="label reveal"><span class="mono">09</span>Connect</p>
+    <p class="label reveal"><span class="mono">08</span>Connect</p>
     <h2 class="mega-cta reveal" style="--d:100ms">Building a school, a project or an idea? Let's talk.</h2>
     <div class="hero-cta reveal" style="--d:200ms">
       <a class="btn btn-gold" href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i>Connect with Sarath</a>
@@ -338,7 +319,7 @@
 <script src="https://unpkg.com/three@0.149.0/build/three.min.js"></script>
 <script src="build3d.js"></script>
 <script src="main.js"></script>
-<script src="hero.js"></script>
+<script src="world.js"></script>
 <script src="scene.js"></script>
 </body>
 </html>
