@@ -1,0 +1,50 @@
+{
+ "mylapore": {
+  "file": "mylapore.jpg",
+  "artist": "N. Vivekananthamoorthy",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kapaleeshwarar_Temple,_Mylapore,_Chennai,_India.jpg"
+ },
+ "tnagar": {
+  "file": "tnagar.jpg",
+  "artist": "Arunsarv",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Diwali_Urban_Shopping,_Thiyagaraja_Nagar,_Chennai.jpg"
+ },
+ "adyar": {
+  "file": "adyar.jpg",
+  "artist": "rajaraman sundaram",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:River_adyar_estuary,chennai,tamilnadu_-_panoramio.jpg"
+ },
+ "annanagar": {
+  "file": "annanagar.jpg",
+  "artist": "Rasnaboy",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Anna_Nagar_Tower_Park_From_Entrance_20Jan2013.jpg"
+ },
+ "guindy": {
+  "file": "guindy.jpg",
+  "artist": "Ara C",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:View_of_Guindy_National_Park,_Chennai.png"
+ },
+ "velachery": {
+  "file": "velachery.jpg",
+  "artist": "Fioselvan",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sunset_at_Velachery_Chennai.jpg"
+ },
+ "porur": {
+  "file": "porur.jpg",
+  "artist": "The EnforcerOffice of the secret service",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Porur_Lake_and_flyover.jpg"
+ },
+ "omr": {
+  "file": "omr.jpg",
+  "artist": "Nazeem Fasil",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Rajiv_Gandhi_IT_Expressway(OMR).jpg"
+ }
+}
