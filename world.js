@@ -7,8 +7,8 @@
   const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
   const easeOut = (t) => 1 - Math.pow(1 - t, 4);
   const lerp = (a, b, t) => a + (b - a) * t;
-  const IW = 1712, IH = 919;                       // artwork coordinate space
-  const REAL = { x: 231, y: 576, w: 83, h: 262 };   // where the real photo sits on the illustrated figure
+  const PAD = 200, IW0 = 1712, IH = 919, IW = IW0 + PAD;   // artwork coordinate space (left extended by PAD so he can be centred)
+  const REAL = { x: 231 + PAD, y: 576, w: 83, h: 262 };       // where the real photo sits on the illustrated figure
 
   const root = document.getElementById('top');
   const stage = document.getElementById('worldStage');
@@ -34,7 +34,7 @@
   // Images
   const load = (src) => new Promise((res) => { const i = new Image(); i.decoding = 'async'; i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
   let art = null, clean = null, real = null, realNight = null;
-  Promise.all([load('assets/india-world-2x.webp?v=3'), load('assets/india-world-clean-2x.webp?v=2'), load('assets/sarath-full.webp?v=3')]).then(([a, c, r]) => {
+  Promise.all([load('assets/india-world-ext-2x.webp?v=1'), load('assets/india-world-clean-ext-2x.webp?v=1'), load('assets/sarath-full.webp?v=3')]).then(([a, c, r]) => {
     art = a; clean = c; real = r;
     if (r) { realNight = document.createElement('canvas'); realNight.width = r.naturalWidth; realNight.height = r.naturalHeight; const g = realNight.getContext('2d'); g.drawImage(r, 0, 0); g.globalCompositeOperation = 'source-atop'; g.fillStyle = 'rgba(24,22,70,0.42)'; g.fillRect(0, 0, realNight.width, realNight.height); }
     queue();
@@ -51,15 +51,17 @@
     { fx: 0.265, fy: 0.415, z: 2.4, pin: 'NCERT · 2025', year: 'August 2025', h: 'NCERT says yes.', t: 'NCERT signs an MoU at its New Delhi headquarters to convert its textbooks into KATBOOKs, with nationwide rollout planned over 18 months.', stat: '18 month national rollout' },
     { fx: 0.63, fy: 0.44, z: 2.0, pin: 'The horizon', year: 'The horizon', h: 'Quality education for every child.', t: 'The goal behind the NCERT partnership: offline access to learning for 250 million students across India.', stat: '250M students' },
   ];
+  STOPS.forEach(s => { s.fx = (s.fx * IW0 + PAD) / IW; });
   const VISTA = { fx: 0.5, fy: 0.5, z: 1, c: 'mid' };
-  const camOf = (s) => ({ fx: s.fx, fy: s.fy, z: s.z, cap: s.cap, c: 'card' });
+  const camOf = (s, extra) => ({ fx: s.fx, fy: s.fy, z: s.z, cap: s.cap, c: 'card', ...(s === STOPS[0] ? { fit: 0.74 } : {}), ...extra });
+  const REVEAL = () => ({ fx: STOPS[0].fx, fy: STOPS[0].fy, z: 3, c: 'rev', fit: 0.8 });
 
   // Timeline of segments. w is a relative scroll length.
   const SEGS = [
     { k: 'hold', cam: VISTA, w: 0.7, title: true },
-    { k: 'fly', from: VISTA, to: camOf(STOPS[0]), w: 1.3 },
-    { k: 'reveal', cam: { ...camOf(STOPS[0]), c: 'mid' }, w: 1.8 },
-    { k: 'fly', from: { ...camOf(STOPS[0]), c: 'mid' }, to: camOf(STOPS[0]), w: 0.1, tag: 'settle' },
+    { k: 'fly', from: VISTA, to: REVEAL(), w: 1.3 },
+    { k: 'reveal', cam: REVEAL(), w: 1.8 },
+    { k: 'fly', from: REVEAL(), to: camOf(STOPS[0]), w: 0.1, tag: 'settle' },
     { k: 'hold', cam: camOf(STOPS[0]), w: 1.1, card: 0 },
   ];
   for (let i = 1; i < STOPS.length; i++) SEGS.push({ k: 'fly', from: camOf(STOPS[i - 1]), to: camOf(STOPS[i]), w: 0.75, tag: i === 1 ? 'leave0' : '' }, { k: 'hold', cam: camOf(STOPS[i]), w: 1.05, card: i });
@@ -109,6 +111,7 @@
   const target = (c) => {
     const wide = vw >= 900;
     if (c === 'card') return wide ? [vw * 0.63, vh * 0.42] : [vw * 0.5, vh * 0.3];
+    if (c === 'rev') return [vw * 0.5, vh * 0.52];          // dead centre, a little below the nav
     return [vw * 0.5, vh * 0.5];
   };
   const mix = (a, b, e) => {
@@ -116,7 +119,10 @@
     const dip = 1 - 0.16 * Math.sin(Math.PI * e);
     const zs = vw < 700 ? 0.78 : 1;
     const px = Wi / IW;
-    const fz = (st) => (st.z > 1 ? Math.max(1, Math.min(st.z * zs, Math.max(1.25, (st.cap || 1.9) / px))) : 1);
+    const fz = (st) => {
+      if (st.fit) return Math.max(1, (st.fit * vh) / (REAL.h * (Hi / IH)));   // zoom so the whole figure fits the screen
+      return st.z > 1 ? Math.max(1, Math.min(st.z * zs, Math.max(1.25, (st.cap || 1.9) / px))) : 1;
+    };
     const za = fz(a), zb = fz(b);
     return { fx: lerp(a.fx, b.fx, e), fy: lerp(a.fy, b.fy, e), z: Math.exp(lerp(Math.log(za), Math.log(zb), e)) * dip, tx: lerp(ta[0], tb[0], e), ty: lerp(ta[1], tb[1], e) };
   };
