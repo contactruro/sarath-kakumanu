@@ -55,7 +55,7 @@
   $$('#story, #territory, #work, #faq').forEach(s => sio.observe(s));
 
   // Respect saved-data / reduced motion for the video
-  const v = $('.hero video');
+  const v = $('.stage video');
   if (v && matchMedia('(prefers-reduced-motion: reduce)').matches) v.removeAttribute('autoplay'), v.pause();
 })();
 
