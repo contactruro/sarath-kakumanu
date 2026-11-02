@@ -17,7 +17,7 @@
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 <link rel="stylesheet" href="site.css?v=9">
 <link rel="stylesheet" href="scene.css?v=9">
-<link rel="stylesheet" href="pro.css?v=2">
+<link rel="stylesheet" href="pro.css?v=5">
 <link rel="stylesheet" href="world.css?v=9">
 <link rel="stylesheet" href="build.css?v=9">
 <script type="application/ld+json">
@@ -148,15 +148,35 @@
     <p class="sec-sub reveal">Building materials, and the machines that make them</p>
     <div class="cases">
       <div class="case reveal">
-        <div class="panel" style="--tint:#fffbe6"><svg class="kwall" viewBox="0 0 800 450" role="img" aria-label="Cross section of a KWALL lightweight hollow core wall panel">
-  <rect x="120" y="96" width="560" height="190" rx="8" fill="#f5c542" stroke="#0e1511" stroke-width="2"/>
-  <g fill="#fffdf2" stroke="#0e1511" stroke-width="2"><rect x="150" y="122" width="82" height="138" rx="30"/><rect x="262" y="122" width="82" height="138" rx="30"/><rect x="374" y="122" width="82" height="138" rx="30"/><rect x="486" y="122" width="82" height="138" rx="30"/><rect x="598" y="122" width="52" height="138" rx="24"/></g>
-  <g stroke="#0e1511" stroke-width="1.5" fill="none"><path d="M120 322v18M680 322v18M120 331h560"/><path d="M706 96h18M706 286h18M715 96v190"/></g>
-  <text x="400" y="360" text-anchor="middle">panel width</text><text x="744" y="196" transform="rotate(90 744 196)" text-anchor="middle">thickness</text>
-  <path d="M190 122 L168 70" stroke="#10281f" stroke-width="2"/><text x="60" y="62">hollow core keeps it light</text>
-  <text x="26" y="424" style="font-size:12px;fill:#66706a">KWALL · developed 2014 · lightweight hollow core wall panel (illustration)</text>
+        <div class="panel" style="--tint:#10281f"><svg class="kwall" viewBox="0 0 800 450" role="img" aria-label="Cutaway drawing of a KWALL lightweight hollow core wall panel showing its hollow channels">
+  <defs><pattern id="kgrid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1"/></pattern></defs>
+  <rect width="800" height="450" fill="#10281f"/><rect width="800" height="450" fill="url(#kgrid)"/>
+  <g font-family="JetBrains Mono, monospace" font-size="12" letter-spacing=".08em">
+    <text x="40" y="36" fill="#f5c542">KWALL</text><text x="92" y="36" fill="#9fb3a9">HOLLOW CORE WALL PANEL · 2014</text>
+  </g>
+  <!-- top and left faces -->
+  <polygon points="300,160 640,160 500,86 160,86" fill="#f8d466"/>
+  <polygon points="300,160 160,86 160,236 300,310" fill="#c99716"/>
+  <!-- front face with hollow cores -->
+  <rect x="300" y="160" width="340" height="150" rx="4" fill="#f5c542"/>
+  <g fill="#0b1a14" stroke="#9a7410" stroke-width="2">
+    <rect x="322" y="182" width="52" height="106" rx="20"/><rect x="394" y="182" width="52" height="106" rx="20"/><rect x="466" y="182" width="52" height="106" rx="20"/><rect x="538" y="182" width="52" height="106" rx="20"/><rect x="610" y="190" width="20" height="90" rx="9"/>
+  </g>
+  <g fill="#1d3b2e"><rect x="326" y="186" width="14" height="98" rx="7"/><rect x="398" y="186" width="14" height="98" rx="7"/><rect x="470" y="186" width="14" height="98" rx="7"/><rect x="542" y="186" width="14" height="98" rx="7"/></g>
+  <!-- ghost channels along the length on the top face -->
+  <g stroke="#b98b12" stroke-width="1.5" stroke-dasharray="5 5" fill="none" opacity=".7"><path d="M348 160 L208 86M420 160 L280 86M492 160 L352 86M564 160 L424 86"/></g>
+  <!-- dimensions -->
+  <g stroke="#cfe0d6" stroke-width="1.5" fill="none"><path d="M672 160v150M664 160h16M664 310h16"/><path d="M300 342h340M300 334v16M640 334v16"/><path d="M160 70L500 70M160 64v12M500 64v12" transform="translate(0 -4)"/></g>
+  <g font-family="JetBrains Mono, monospace" font-size="12" fill="#cfe0d6" letter-spacing=".06em">
+    <text x="470" y="368" text-anchor="middle">panel width</text><text x="696" y="240" transform="rotate(90 696 240)" text-anchor="middle">thickness</text><text x="330" y="56" text-anchor="middle" fill="#9fb3a9" transform="translate(0 -4)">length</text>
+  </g>
+  <!-- callouts -->
+  <g stroke="#f5c542" stroke-width="1.5" fill="none"><path d="M420 235 C 405 300, 340 358, 282 372"/><circle cx="420" cy="235" r="4" fill="#f5c542"/><path d="M330 123 C 316 132, 304 144, 288 150"/><circle cx="330" cy="123" r="4" fill="#f5c542"/></g>
+  <g font-family="Figtree, sans-serif" font-weight="700" font-size="15" fill="#fff"><text x="40" y="376">Hollow channels keep it light</text><text x="40" y="154">Made on machinery he designed</text></g>
+  <text x="40" y="420" font-family="JetBrains Mono, monospace" font-size="11" fill="#7f958a" letter-spacing=".06em">ILLUSTRATION · NOT TO SCALE</text>
 </svg></div>
         <div class="case-meta"><div><div class="lab">2014</div><h3>KWALL wall panels</h3></div><p class="d">Lightweight hollow core wall panels, and the machinery he designed to make different types of acoustic wall panels.</p><span></span></div>
+        <ul class="spec-chips"><li>Developed 2014</li><li>Hollow core</li><li>Lightweight</li><li>Acoustic variants</li><li>Machinery designed by Sarath</li></ul>
       </div>
     </div>
   </div>

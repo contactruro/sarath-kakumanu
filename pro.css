@@ -75,7 +75,6 @@
 .panel .build-hint { color: #aab5af; }
 @media (max-width: 767px) { .panel .build-card { display: none; } .panel.dark { aspect-ratio: 4 / 5; } }
 .kwall { width: 100%; height: 100%; display: block; }
-.kwall text { font-family: "JetBrains Mono", monospace; font-size: 13px; fill: #0e1511; }
 
 /* Press */
 .press-wrap { margin-top: 32px; display: grid; gap: 28px; }
@@ -148,3 +147,5 @@
 @media (prefers-reduced-motion: reduce) { .ribbon-track { animation: none; } .panel img { transition: none; } }
 .card-dark { max-width: 860px; }
 @media (min-width: 768px) { .card-dark { min-height: 440px; } .card-dark .cutout { height: 104%; right: 0; } .card-dark p.body, .card-dark .reach, .card-dark .at, .card-dark .role { max-width: 410px; } .card-dark h2 { font-size: 30px; line-height: 36px; } }
+.spec-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 6px 0; padding: 0; list-style: none; }
+.spec-chips li { padding: 6px 14px; border-radius: 9999px; border: 1px solid var(--line); background: #f6f8f6; color: var(--ink); font: 600 13px/18px "Figtree", sans-serif; }
