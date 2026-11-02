@@ -52,7 +52,17 @@
   const sio = new IntersectionObserver((es) => es.forEach(e => {
     if (e.isIntersecting) links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id));
   }), { rootMargin: '-45% 0px -50% 0px' });
-  $$('#about, #journey, #work, #territory, #faq, #connect').forEach(s => sio.observe(s));
+  $$('#about, #journey, #education, #press, #work, #territory, #faq, #connect').forEach(s => sio.observe(s));
+
+  // YouTube click to load: no third party request until the visitor presses play
+  $$('.yt-btn').forEach(btn => btn.addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + btn.dataset.yt + '?autoplay=1&rel=0';
+    f.title = btn.getAttribute('aria-label').replace('Play video: ', '');
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.allowFullscreen = true;
+    btn.replaceWith(f);
+  }));
 
   const v = $('.hero-video');
   if (v && matchMedia('(prefers-reduced-motion: reduce)').matches) v.removeAttribute('autoplay'), v.pause();
