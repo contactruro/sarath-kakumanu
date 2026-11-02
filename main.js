@@ -52,7 +52,7 @@
   const sio = new IntersectionObserver((es) => es.forEach(e => {
     if (e.isIntersecting) links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id));
   }), { rootMargin: '-45% 0px -50% 0px' });
-  $$('#top, #education, #press, #work, #territory, #faq, #connect').forEach(s => sio.observe(s));
+  $$('#top, #about, #work, #press, #experience, #chennai, #faq, #connect').forEach(s => sio.observe(s));
 
   // YouTube click to load: no third party request until the visitor presses play
   $$('.yt-btn').forEach(btn => btn.addEventListener('click', () => {
