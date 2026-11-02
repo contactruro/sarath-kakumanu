@@ -40,7 +40,7 @@
     const end = +e.target.dataset.count, t0 = performance.now(), dur = 1600;
     const tick = (t) => {
       const p = Math.min((t - t0) / dur, 1), k = 1 - Math.pow(1 - p, 4);
-      e.target.textContent = Math.round(end * k);
+      e.target.textContent = Math.round(end * k) + (e.target.dataset.suffix || "");
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
@@ -52,7 +52,7 @@
   const sio = new IntersectionObserver((es) => es.forEach(e => {
     if (e.isIntersecting) links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id));
   }), { rootMargin: '-45% 0px -50% 0px' });
-  $$('#story, #territory, #work, #faq').forEach(s => sio.observe(s));
+  $$('#story, #journey, #territory, #work, #faq').forEach(s => sio.observe(s));
 
   // Respect saved-data / reduced motion for the video
   const v = $('.stage video');
