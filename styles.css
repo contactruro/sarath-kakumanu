@@ -379,3 +379,61 @@ h1, h2, h3, .h2, .stage h1 { letter-spacing: -.025em; }
 .lot-body .c { margin-top: var(--s-200); }
 .credits { margin-top: var(--s-400); font-size: 14px; line-height: 20px; color: var(--ink-mute); max-width: 1000px; }
 .credits a { text-decoration: underline; text-underline-offset: 3px; }
+
+
+/* ===== Off white premium surfaces ===== */
+:root { --bg: #fafaf7; --bg-2: #f2f1ec; --bg-3: #ffffff; --bg-4: #e9e7df; --line: #e3e1d8; --ink: #16140f; --ink-mute: #5f5b50; --brass: #a86f00; }
+.stage, .nav, .menu { --bg: #060a1f; --bg-2: #0b1236; --bg-3: #121b4d; --ink: #fff8e7; --ink-mute: #e9e1c8; --brass: #f7c548; --line: rgba(255,248,231,.25); }
+.nav.on-light { background: rgba(250,250,247,.72); border-bottom-color: rgba(22,20,15,.08); color: #16140f; }
+.nav.on-light .nav-links a { color: rgba(22,20,15,.6); }
+.nav.on-light .nav-links a:hover, .nav.on-light .nav-links a[aria-current="true"], .nav.on-light .burger { color: #16140f; }
+.nav.on-light .nav-cta { background: #16140f; color: #fafaf7; }
+.btn-primary { background: #16140f; color: #fafaf7; }
+.btn-ghost { border-color: rgba(22,20,15,.3); }
+.lot { border-color: var(--line); }
+.lot:hover, .card:hover, .dev-step.is-active { box-shadow: 0 16px 40px rgba(22,20,15,.1); }
+.card .ic, .dev-step .ic { background: #f4f1e6; }
+.chip:hover { background: #f4f1e6; }
+.tagline-text .w { color: rgba(22,20,15,.2); }
+.final { background: var(--bg-2); }
+.skip { background: #16140f; color: #fafaf7; }
+.terr { background: var(--bg-2); }
+
+/* 3D development section */
+.dev { margin-top: var(--s-600); display: grid; gap: var(--s-400); }
+@media (min-width: 900px) { .dev { grid-template-columns: 7fr 5fr; gap: var(--s-700); align-items: start; } }
+.dev-scene { position: sticky; top: 80px; z-index: 2; height: 56svh; min-height: 340px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+@media (min-width: 900px) { .dev-scene { top: 96px; height: 72svh; } }
+.dev-scene canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; touch-action: pan-y; }
+.dev-scene canvas:active { cursor: grabbing; }
+.dev-hud { position: absolute; left: var(--s-200); right: var(--s-200); bottom: var(--s-200); display: flex; justify-content: space-between; gap: var(--s-200); font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-mute); pointer-events: none; }
+.dev-hud span:first-child { color: var(--brass); }
+.dev-steps { display: grid; gap: var(--s-300); }
+@media (min-width: 900px) { .dev-steps { gap: 28svh; padding-block: 12svh; } }
+.dev-step { padding: var(--s-400); background: var(--bg-3); border: 1px solid var(--line); border-radius: 16px; opacity: .55; transition: all 700ms var(--ease); cursor: pointer; }
+.dev-step.is-active { opacity: 1; border-color: var(--brass); transform: translateY(-4px); }
+.dev-step .ic { width: var(--s-600); height: var(--s-600); border-radius: 12px; display: grid; place-items: center; color: var(--brass); font-size: 24px; }
+.dev-step .mono { margin-top: var(--s-300); font-size: 14px; line-height: 20px; color: var(--brass); }
+.dev-step h3 { margin-top: var(--s-100); font-size: 36px; line-height: 40px; }
+.dev-step p:last-child { margin-top: var(--s-100); font-size: 18px; line-height: 28px; color: var(--ink-mute); }
+
+/* ===== Glass cards ===== */
+.lot, .card, .dev-step, .quote, .stat, .chip, .dev-scene {
+  background: rgba(255,255,255,.58);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255,255,255,.9);
+  box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 12px 32px rgba(22,20,15,.07);
+}
+.lot:hover, .card:hover { background: rgba(255,255,255,.78); border-color: #fff; }
+.dev-step.is-active { background: rgba(255,255,255,.85); border-color: rgba(168,111,0,.55); }
+.stats { border-color: rgba(255,255,255,.9); background: transparent; }
+.stat { box-shadow: none; border-radius: 0; }
+.lot-body { background: transparent; }
+/* soft colour fields behind the glass so the blur has something to refract */
+#territory, #work, #connect, #story { position: relative; overflow: hidden; isolation: isolate; }
+#territory::before, #work::before, #connect::before, #story::before { content: ""; position: absolute; z-index: -1; width: 520px; height: 520px; border-radius: 9999px; background: #f2d98a; opacity: .45; filter: blur(90px); top: 10%; right: -120px; }
+#territory::after, #work::after, #connect::after { content: ""; position: absolute; z-index: -1; width: 460px; height: 460px; border-radius: 9999px; background: #cfd8ee; opacity: .5; filter: blur(100px); bottom: 8%; left: -140px; }
+@media (prefers-reduced-transparency: reduce) { .lot, .card, .dev-step, .quote, .stat, .chip, .dev-scene { background: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; } }
+@media (max-width: 899px) { .dev { display: block; } .dev-steps { margin-top: var(--s-300); } .dev-scene { height: 44svh; } }
+#territory, #work, #connect, #story { overflow: clip; }

@@ -139,10 +139,16 @@
   <div class="wrap">
     <p class="eyebrow reveal">What he does</p>
     <h2 class="h2 reveal" style="--d:100ms">Land, projects and partnerships, grounded in the city.</h2>
-    <div class="cards">
-      <article class="card reveal"><div class="ic"><i class="ph ph-map-trifold"></i></div><h3>Land sourcing</h3><p>Finding parcels with clean titles and real growth ahead of them, before the market notices.</p></article>
-      <article class="card reveal" style="--d:100ms"><div class="ic"><i class="ph ph-buildings"></i></div><h3>Project development</h3><p>Taking a plot from survey to handover with a founder who still visits the site.</p></article>
-      <article class="card reveal" style="--d:200ms"><div class="ic"><i class="ph ph-handshake"></i></div><h3>Partnerships</h3><p>Landowners, investors and builders who want a straight conversation with the person deciding.</p></article>
+    <div class="dev">
+      <div class="dev-scene reveal">
+        <canvas id="dev3d" aria-label="3D model of a development rising on a Chennai plot" role="img"></canvas>
+        <div class="dev-hud mono"><span id="devLabel">STAGE 01 · LAND</span><span>Drag to look around</span></div>
+      </div>
+      <div class="dev-steps">
+        <article class="dev-step is-active" data-stage="0"><div class="ic"><i class="ph ph-map-trifold"></i></div><p class="mono">01 / Land sourcing</p><h3>Find the plot before the market does.</h3><p>Clean titles, honest boundaries and real growth ahead of them. Sarath walks the parcel, meets the neighbours and reads every document before a single rupee moves.</p></article>
+        <article class="dev-step" data-stage="1"><div class="ic"><i class="ph ph-buildings"></i></div><p class="mono">02 / Project development</p><h3>Take it from survey to skyline.</h3><p>Foundation, structure, finish and handover under one founder who still visits the site and still answers the phone.</p></article>
+        <article class="dev-step" data-stage="2"><div class="ic"><i class="ph ph-handshake"></i></div><p class="mono">03 / Partnerships</p><h3>Grow a neighbourhood, not just a building.</h3><p>Landowners, investors and builders working with the person who decides, so one good project becomes a whole district.</p></article>
+      </div>
     </div>
     <h2 class="h2 reveal" style="margin-top:96px">How a conversation with Sarath works.</h2>
     <div class="cards steps">
@@ -190,6 +196,8 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/three@0.149.0/build/three.min.js"></script>
+<script src="dev3d.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
