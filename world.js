@@ -103,7 +103,11 @@
 
   // Sizing: the canvas always matches the stage, and the virtual artwork box covers it with a small bleed
   let vw = 0, vh = 0, Wi = 0, Hi = 0, dpr = 1;
+  // The stage is sized from what the browser reports as the visible height right now, never smaller than any of the candidates.
+  // Phone browsers disagree about vh units while the address bar slides, so we do not trust CSS units alone.
+  const visibleH = () => Math.max(window.innerHeight, window.visualViewport ? Math.round(visualViewport.height) : 0, document.documentElement.clientHeight);
   function measure() {
+    stage.style.height = visibleH() + 'px';
     vw = stage.clientWidth; vh = stage.clientHeight; dpr = Math.min(window.devicePixelRatio || 1, vw < 700 ? 1.5 : 2);
     canvas.width = Math.round(vw * dpr); canvas.height = Math.round(vh * dpr);
     const k = Math.max(vw / IW, vh / IH) * 1.03; Wi = IW * k; Hi = IH * k;
@@ -132,7 +136,7 @@
 
   // Draw the visible crop of the artwork. The source rectangle comes from the camera and is clamped inside the image.
   function draw(st, realOp, shadeOp) {
-    if (!art) { ctx.fillStyle = '#1b1230'; ctx.fillRect(0, 0, canvas.width, canvas.height); return null; }
+    if (!art) { ctx.fillStyle = '#1d2419'; ctx.fillRect(0, 0, canvas.width, canvas.height); return null; }
     let tx = st.tx - st.z * st.fx * Wi, ty = st.ty - st.z * st.fy * Hi;
     tx = Math.min(0, Math.max(vw - st.z * Wi, tx)); ty = Math.min(0, Math.max(vh - st.z * Hi, ty));
     const iw = art.naturalWidth, ih = art.naturalHeight;
@@ -160,7 +164,7 @@
 
   function render() {
     queued = false;
-    if (stage.clientWidth !== vw || stage.clientHeight !== vh) measure();
+    if (stage.clientWidth !== vw || stage.clientHeight !== vh || visibleH() !== vh) measure();
     if (Math.abs(nightK - nightTo) > 0.002) { nightK += (nightTo - nightK) * 0.14; queue(); } else nightK = nightTo;
     const span = root.offsetHeight - stage.clientHeight;
     const rect = root.getBoundingClientRect();
