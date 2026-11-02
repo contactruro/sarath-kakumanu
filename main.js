@@ -93,3 +93,11 @@
   addEventListener('resize', queue);
   render();
 })();
+
+// Navbar switches from dark-scene glass to light glass once the pinned stage has scrolled away
+(() => {
+  const nav = document.querySelector('.nav'), stage = document.querySelector('.stage');
+  if (!nav || !stage) return;
+  new IntersectionObserver(([e]) => nav.classList.toggle('on-light', !e.isIntersecting),
+    { rootMargin: '-64px 0px 0px 0px' }).observe(stage);
+})();
