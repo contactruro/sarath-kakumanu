@@ -34,7 +34,7 @@
   // Images
   const load = (src) => new Promise((res) => { const i = new Image(); i.decoding = 'async'; i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
   let art = null, clean = null, real = null, realNight = null;
-  Promise.all([load('assets/india-world-ext-2x.webp?v=1'), load('assets/india-world-clean-ext-2x.webp?v=1'), load('assets/sarath-full.webp?v=3')]).then(([a, c, r]) => {
+  Promise.all([load('assets/india-world-ext-2x.webp?v=5'), load('assets/india-world-clean-ext-2x.webp?v=5'), load('assets/sarath-full.webp?v=3')]).then(([a, c, r]) => {
     art = a; clean = c; real = r;
     if (r) { realNight = document.createElement('canvas'); realNight.width = r.naturalWidth; realNight.height = r.naturalHeight; const g = realNight.getContext('2d'); g.drawImage(r, 0, 0); g.globalCompositeOperation = 'source-atop'; g.fillStyle = 'rgba(24,22,70,0.42)'; g.fillRect(0, 0, realNight.width, realNight.height); }
     queue();
@@ -121,7 +121,7 @@
     const px = Wi / IW;
     const fz = (st) => {
       if (st.fit) return Math.max(1, (st.fit * vh) / (REAL.h * (Hi / IH)));   // zoom so the whole figure fits the screen
-      return st.z > 1 ? Math.max(1, Math.min(st.z * zs, Math.max(1.25, (st.cap || 1.9) / px))) : 1;
+      return st.z > 1 ? Math.max(1, Math.min(st.z * zs, Math.max(1.25, (st.cap || 3.4) / px))) : 1;
     };
     const za = fz(a), zb = fz(b);
     return { fx: lerp(a.fx, b.fx, e), fy: lerp(a.fy, b.fy, e), z: Math.exp(lerp(Math.log(za), Math.log(zb), e)) * dip, tx: lerp(ta[0], tb[0], e), ty: lerp(ta[1], tb[1], e) };
