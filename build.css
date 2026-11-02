@@ -16,8 +16,8 @@
 
 .build-hud { position: absolute; top: var(--s-300); left: var(--s-300); pointer-events: none; }
 @media (min-width: 900px) { .build-hud { top: var(--s-400); left: var(--s-400); } }
-.pct { display: flex; align-items: baseline; gap: var(--s-50); font-family: "Cormorant Garamond", serif; color: var(--ink); }
-.pct b { font-size: 72px; line-height: 1; font-weight: 600; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.pct { display: flex; align-items: baseline; gap: var(--s-50); font-family: var(--display); color: var(--ink); }
+.pct b { font-size: 72px; line-height: 1; font-weight: 400; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
 .pct span { font-size: 30px; line-height: 36px; color: var(--brass); }
 .build-hud .mono { margin-top: var(--s-50); font-size: 14px; line-height: 20px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-mute); }
 @media (min-width: 900px) { .pct b { font-size: 96px; } }
@@ -34,3 +34,7 @@
 .build-hint { position: absolute; right: var(--s-300); bottom: var(--s-300); font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-mute); display: none; }
 @media (min-width: 900px) { .build-hint { display: block; right: var(--s-400); bottom: var(--s-400); } }
 @media (prefers-reduced-motion: reduce) { .build-card.swap > * { animation: none; } }
+
+.build-sticky { --ink: #131209; --ink-mute: #66624f; --brass: #a86f00; --line: #e1ded2; color: #131209; }
+.build-card h3, .tl-card h3, .beat h2, .pct b, .pct span { font-family: var(--display); font-weight: 400; }
+.build-card h3 { font-size: 36px; line-height: 36px; }

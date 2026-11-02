@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sarath Kakumanu | Chennai real estate</title>
+<title>Sarath Kakumanu | Founder, Pioneer Group, Chennai</title>
 <meta name="description" content="Sarath Kakumanu is the founder of Pioneer Group, one of the most respected real estate houses in Chennai. Over five decades he has built almost 3 million square feet across Tamil Nadu and Andhra Pradesh and invented KWALL wall panels.">
-<meta property="og:title" content="Sarath Kakumanu | Chennai real estate">
-<meta property="og:description" content="Founder of Pioneer Group. Five decades of design and construction. Almost 3 million square feet built.">
+<meta property="og:title" content="Sarath Kakumanu | Founder, Pioneer Group, Chennai">
+<meta property="og:description" content="Five decades of design and construction. Almost 3 million square feet built. Inventor of KWALL.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/chennai-poster.jpg">
-<meta name="theme-color" content="#060a1f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060a1f'/%3E%3Cpath d='M14 50V28L32 14l18 14v22H38V36H26v14z' fill='%23f7c548'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#131209">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131209'/%3E%3Cpath d='M14 50V28L32 14l18 14v22H38V36H26v14z' fill='%23f7c548'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Manrope:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="scene.css">
 <link rel="stylesheet" href="build.css">
 <script type="application/ld+json">
@@ -29,7 +29,7 @@
   <div class="nav-bar wrap">
     <a class="brand" href="#top" aria-label="Sarath Kakumanu, home">Sarath Kakumanu</a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#story">The man</a><a href="#journey">Journey</a><a href="#territory">Territory</a><a href="#work">Work</a><a href="#faq">FAQ</a>
+      <a href="#about">About</a><a href="#journey">Journey</a><a href="#work">Work</a><a href="#territory">Territory</a><a href="#faq">FAQ</a>
     </nav>
     <a class="nav-cta" href="#connect">Connect</a>
     <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
@@ -37,87 +37,123 @@
 </header>
 <div class="menu" id="menu" aria-hidden="true">
   <ul>
-    <li><a href="#story"><span>The man</span></a></li>
-    <li><a href="#journey"><span>Journey</span></a></li><li><a href="#territory"><span>Territory</span></a></li>
+    <li><a href="#about"><span>About</span></a></li>
+    <li><a href="#journey"><span>Journey</span></a></li>
     <li><a href="#work"><span>Work</span></a></li>
+    <li><a href="#territory"><span>Territory</span></a></li>
     <li><a href="#faq"><span>FAQ</span></a></li>
     <li><a href="#connect"><span>Connect</span></a></li>
   </ul>
 </div>
 
 <main id="main">
-<!-- HERO -->
-<section class="stage" id="top"><div class="stage-sticky">
-  <video autoplay muted loop playsinline preload="auto" poster="assets/chennai-poster.jpg" aria-label="Aerial footage of Chennai">
-    <source src="assets/chennai.mp4" type="video/mp4">
-  </video>
-  <div class="hero-shade"></div>
-  <svg class="hero-grid" width="100%" height="100%" aria-hidden="true">
-    <defs><pattern id="g" width="96" height="96" patternUnits="userSpaceOnUse"><path d="M96 0H0V96" fill="none" stroke="rgba(244,241,232,.08)" stroke-width="1"/></pattern></defs>
-    <rect width="100%" height="100%" fill="url(#g)"/>
-  </svg>
-  <div class="coords mono">13.0827° N<br>80.2707° E<br>CHENNAI</div>
-  <div class="wrap hero-inner" id="heroText">
-    <p class="eyebrow reveal">Founder, Pioneer Group · Chennai</p>
-    <h1 class="reveal" style="--d:100ms;margin-top:16px">Chennai was built<br>one plot at a time.<br>He walked every one.</h1>
-    <p class="sub reveal" style="--d:200ms">Managing Director of Pioneer Group since 1983, Sarath Kakumanu has spent more than five decades in design and construction management, building almost 3 million square feet across Tamil Nadu and Andhra Pradesh.</p>
-    <div class="hero-cta reveal" style="--d:300ms">
-      <a class="btn btn-primary" href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i>Connect with Sarath</a>
-      <a class="btn btn-ghost" href="#story">Meet the founder</a>
-    </div>
-    <div class="hero-proof reveal" style="--d:400ms">
-      <div><b>1983</b><span>Pioneer Group founded</span></div>
-      <div><b>3M</b><span>Sq ft built</span></div>
-      <div><b>20+</b><span>Companies led</span></div>
-    </div>
-  </div>
-  <span class="scrollcue" id="cue">Scroll <i class="ph ph-arrow-down"></i></span>
-  <div class="arch" id="arch" aria-hidden="true"></div>
-  <img class="hero-portrait" id="portrait" src="assets/sarath.png" alt="Sarath Kakumanu, Chennai real estate founder, in a dark blazer with arms crossed">
-  <div class="wrap intro" id="intro">
-    <p class="eyebrow">The man behind the map</p>
-    <h2>He touched every square of Chennai, then built an empire on it.</h2>
-    <p class="sub">Sarath Kakumanu<br><span>Founder · Chennai</span></p>
-  </div>
-</div></section>
 
-<!-- PORTRAIT STORY -->
-<section class="scene" id="story" aria-label="About Sarath Kakumanu">
+<!-- HERO -->
+<section class="hero" id="top" data-nav="dark">
+  <div class="hero-sticky">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/chennai-poster.jpg" aria-label="Aerial footage of Chennai">
+      <source src="assets/chennai.mp4" type="video/mp4">
+    </video>
+    <div class="hero-shade" id="heroShade"></div>
+
+    <div class="hero-intro wrap" id="heroIntro">
+      <p class="eyebrow">Founder, Pioneer Group · Chennai</p>
+      <p class="hero-title">Chennai was built one plot at a time. He walked every one.</p>
+      <p class="hero-sub">Over five decades of design and construction management. Almost 3 million square feet built across Tamil Nadu and Andhra Pradesh.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i>Connect with Sarath</a>
+        <a class="btn btn-line" href="#about">Meet the founder</a>
+      </div>
+    </div>
+
+    <h1 class="hero-name" id="heroName"><span class="nm nm-l">Sarath</span><span class="nm nm-r">Kakumanu</span></h1>
+    <img class="hero-portrait" id="heroPortrait" src="assets/sarath.png" alt="Sarath Kakumanu, founder of Pioneer Group, in a dark blazer with arms crossed">
+    <div class="hero-role mono" id="heroRole"><span>Founder · Pioneer Group</span><span>Chennai · Since 1983</span></div>
+    <span class="scrollcue mono" id="heroCue">Scroll <i class="ph ph-arrow-down"></i></span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" data-nav="dark" aria-label="Companies">
+  <div class="marquee-track">
+    <span>Pioneer Group</span><i></i><span>KWALL</span><i></i><span>Ueducate Global</span><i></i><span>KPOST Software</span><i></i><span>Ritestone Solutions</span><i></i><span>Kakumanu Developers</span><i></i>
+    <span aria-hidden="true">Pioneer Group</span><i></i><span aria-hidden="true">KWALL</span><i></i><span aria-hidden="true">Ueducate Global</span><i></i><span aria-hidden="true">KPOST Software</span><i></i><span aria-hidden="true">Ritestone Solutions</span><i></i><span aria-hidden="true">Kakumanu Developers</span><i></i>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section about" id="about" data-nav="light">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <p class="label reveal"><span class="mono">01</span>About</p>
+      <p class="statement reveal" style="--d:100ms">An entrepreneur with innovative ideas and more than five decades in design and construction management.</p>
+      <div class="about-cols">
+        <p class="reveal" style="--d:150ms">He built Pioneer Group, one of the most respected real estate houses in Chennai, on vast and in depth knowledge of the industry. Almost 3 million square feet of premium, luxury commercial and residential projects now stand in Tamil Nadu and Andhra Pradesh.</p>
+        <p class="reveal" style="--d:200ms">In 2014 he developed KWALL, lightweight hollow core wall panels, and designed the machinery to make different types of acoustic wall panels. His curiosity also led him to write software for real estate sales and marketing, drawings and project management, and a unique coding system for construction materials.</p>
+      </div>
+      <dl class="facts">
+        <div class="reveal"><dt class="mono">Since 1983</dt><dd>Managing Director, Pioneer Group</dd></div>
+        <div class="reveal" style="--d:80ms"><dt class="mono">2014</dt><dd>Developed KWALL wall panels</dd></div>
+        <div class="reveal" style="--d:160ms"><dt class="mono">3M sq ft</dt><dd>Built, almost, in two states</dd></div>
+      </dl>
+    </div>
+    <div class="about-photos">
+      <figure class="ph-a reveal" data-speed="0.06"><img src="assets/sarath-portrait.jpg" alt="Smiling portrait of Sarath Kakumanu" loading="lazy"></figure>
+      <figure class="ph-b reveal" style="--d:150ms" data-speed="-0.05"><img src="assets/sarath-casual.jpg" alt="Sarath Kakumanu in a checked shirt" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- MOMENTS -->
+<section class="section moments" data-nav="light">
+  <div class="wrap">
+    <p class="label reveal"><span class="mono">02</span>Moments</p>
+    <h2 class="display reveal" style="--d:100ms">The person behind the projects.</h2>
+    <div class="bento-l">
+      <figure class="b-photo reveal"><img src="assets/sarath-group.jpg" alt="Sarath Kakumanu with two colleagues in an office" loading="lazy"><figcaption class="mono">With colleagues</figcaption></figure>
+      <div class="b-stat reveal" style="--d:100ms"><b data-count="43">0</b><span>Years leading Pioneer Group, from March 1983 to today.</span></div>
+      <div class="b-stat reveal" style="--d:200ms"><b data-count="20" data-suffix="+">0</b><span>Companies led or directed across construction, hospitality, software and more.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS SCENE -->
+<section class="scene" id="story" data-nav="dark" aria-label="Sarath Kakumanu in numbers">
   <div class="scene-sticky">
     <video class="scene-video" id="sceneVideo" src="assets/story-scrub.mp4" poster="assets/story-poster.jpg" muted playsinline preload="auto" aria-label="Architectural model of a modern villa resting on its floor plans"></video>
     <div class="scene-scrim"></div>
     <div class="scene-rail" aria-hidden="true"><i id="sceneFill"></i></div>
     <p class="scene-count mono" aria-hidden="true"><span id="sceneNum">01</span> / 03</p>
     <div class="beat beat-a" data-beat="0">
-      <p class="eyebrow">The builder</p>
-      <h2>Five decades of design and construction, one founder.</h2>
-      <p>Mr. Sarath Kakumanu is an entrepreneur with innovative ideas and more than fifty years of expertise in design and construction management.</p>
+      <p class="eyebrow">Leadership</p>
+      <h2>43 years at the helm of Pioneer Group.</h2>
+      <p>Managing Director in Chennai from March 1983 to today, in construction management.</p>
     </div>
     <div class="beat beat-b" data-beat="1">
-      <p class="eyebrow">Pioneer Group</p>
-      <h2>He built one of the most respected real estate houses in Chennai.</h2>
-      <p>Almost 3 million square feet of premium, luxury commercial and residential projects across Tamil Nadu and Andhra Pradesh.</p>
+      <p class="eyebrow">Delivered</p>
+      <h2>Almost 3 million square feet.</h2>
+      <p>Premium, luxury commercial and residential projects, built to the standard of a founder who still cares.</p>
     </div>
     <div class="beat beat-c" data-beat="2">
-      <p class="eyebrow">The inventor</p>
-      <h2>Then he started inventing.</h2>
-      <p>In 2014 he developed KWALL, a lightweight hollow core wall panel, and designed the machinery to manufacture acoustic wall panels.</p>
+      <p class="eyebrow">Footprint</p>
+      <h2>Two states, one reputation.</h2>
+      <p>Tamil Nadu and Andhra Pradesh, with Chennai at the centre of it all.</p>
     </div>
   </div>
 </section>
 
-<!-- TAGLINE REVEAL -->
-<section class="section tagline" aria-label="Tagline">
+<!-- TAGLINE -->
+<section class="section tagline" data-nav="light" aria-label="Tagline">
   <div class="wrap">
     <p class="tagline-text" id="tagline" data-hl="empire">Every street in Chennai has a story. Sarath turned the ones nobody saw into an empire.</p>
   </div>
 </section>
 
 <!-- JOURNEY -->
-<section class="section journey" id="journey">
+<section class="section journey" id="journey" data-nav="light">
   <div class="wrap">
-    <p class="eyebrow reveal">A career in chapters</p>
-    <h2 class="h2 reveal" style="--d:100ms">Forty three years, one company at a time.</h2>
+    <p class="label reveal"><span class="mono">03</span>Journey</p>
+    <h2 class="display reveal" style="--d:100ms">Forty three years, one company at a time.</h2>
     <p class="lead reveal" style="--d:200ms">From Pioneer Group in 1983 to Ueducate Global in 2023, every chapter added another way of building.</p>
     <ol class="timeline" id="timeline">
       <li class="tl reveal"><span class="yr mono">1983</span><div class="tl-card"><h3>Pioneer Group</h3><p>Managing Director in Chennai, in construction management. He leads it today.</p></div></li>
@@ -133,38 +169,11 @@
   </div>
 </section>
 
-<!-- TERRITORY -->
-<section class="section terr" id="territory">
+<!-- WORK -->
+<section class="section work" id="work" data-nav="dark">
   <div class="wrap">
-    <div class="terr-head">
-      <p class="eyebrow reveal">The territory</p>
-      <h2 class="h2 reveal" style="--d:100ms">Chennai, mapped one neighbourhood at a time.</h2>
-      <p class="lead reveal" style="--d:200ms">Eight corners of the city that shape his thinking. Coordinates are the real centre of each neighbourhood.</p>
-    </div>
-    <ul class="plots">
-      <li class="lot reveal"><figure class="lot-img"><img src="assets/places/mylapore.jpg" alt="Kapaleeshwarar Temple and its tank in Mylapore, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 01</span><i class="ph ph-corners-out"></i></div><div><h3>Mylapore</h3><p>Heritage streets where every title has a long history.</p><div class="c mono">13.0368° N, 80.2676° E</div></div></div></li>
-      <li class="lot reveal" style="--d:80ms"><figure class="lot-img"><img src="assets/places/tnagar.jpg" alt="Crowded shopping street in T. Nagar, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 02</span><i class="ph ph-corners-out"></i></div><div><h3>T. Nagar</h3><p>The densest commercial grid in the city.</p><div class="c mono">13.0418° N, 80.2341° E</div></div></div></li>
-      <li class="lot reveal" style="--d:160ms"><figure class="lot-img"><img src="assets/places/adyar.jpg" alt="Adyar river estuary, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 03</span><i class="ph ph-corners-out"></i></div><div><h3>Adyar</h3><p>Green, quiet and fiercely sought after.</p><div class="c mono">13.0012° N, 80.2565° E</div></div></div></li>
-      <li class="lot reveal" style="--d:240ms"><figure class="lot-img"><img src="assets/places/annanagar.jpg" alt="Anna Nagar Tower Park, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 04</span><i class="ph ph-corners-out"></i></div><div><h3>Anna Nagar</h3><p>Planned avenues and long term family demand.</p><div class="c mono">13.0850° N, 80.2101° E</div></div></div></li>
-      <li class="lot reveal"><figure class="lot-img"><img src="assets/places/guindy.jpg" alt="Green canopy of Guindy National Park, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 05</span><i class="ph ph-corners-out"></i></div><div><h3>Guindy</h3><p>Where industry, transit and offices meet.</p><div class="c mono">13.0067° N, 80.2206° E</div></div></div></li>
-      <li class="lot reveal" style="--d:80ms"><figure class="lot-img"><img src="assets/places/velachery.jpg" alt="Sunset over Velachery, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 06</span><i class="ph ph-corners-out"></i></div><div><h3>Velachery</h3><p>Fast growth, tight supply, steady rentals.</p><div class="c mono">12.9815° N, 80.2180° E</div></div></div></li>
-      <li class="lot reveal" style="--d:160ms"><figure class="lot-img"><img src="assets/places/porur.jpg" alt="Porur lake and flyover, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 07</span><i class="ph ph-corners-out"></i></div><div><h3>Porur</h3><p>The western gateway, built for new households.</p><div class="c mono">13.0382° N, 80.1565° E</div></div></div></li>
-      <li class="lot reveal" style="--d:240ms"><figure class="lot-img"><img src="assets/places/omr.jpg" alt="Evening traffic on Old Mahabalipuram Road, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 08</span><i class="ph ph-corners-out"></i></div><div><h3>OMR</h3><p>The IT corridor that redrew the map of Chennai.</p><div class="c mono">12.9010° N, 80.2279° E</div></div></div></li>
-    </ul>
-    <p class="credits">Photos from Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Kapaleeshwarar_Temple,_Mylapore,_Chennai,_India.jpg" target="_blank" rel="noopener">Mylapore</a> by N. Vivekananthamoorthy (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Diwali_Urban_Shopping,_Thiyagaraja_Nagar,_Chennai.jpg" target="_blank" rel="noopener">T. Nagar</a> by Arunsarv (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:River_adyar_estuary,chennai,tamilnadu_-_panoramio.jpg" target="_blank" rel="noopener">Adyar</a> by rajaraman sundaram (CC BY 3.0) · <a href="https://commons.wikimedia.org/wiki/File:Anna_Nagar_Tower_Park_From_Entrance_20Jan2013.jpg" target="_blank" rel="noopener">Anna Nagar</a> by Rasnaboy (CC BY-SA 3.0) · <a href="https://commons.wikimedia.org/wiki/File:View_of_Guindy_National_Park,_Chennai.png" target="_blank" rel="noopener">Guindy</a> by Ara C (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Sunset_at_Velachery_Chennai.jpg" target="_blank" rel="noopener">Velachery</a> by Fioselvan (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Porur_Lake_and_flyover.jpg" target="_blank" rel="noopener">Porur</a> by The EnforcerOffice of the secret service (CC BY 3.0) · <a href="https://commons.wikimedia.org/wiki/File:Rajiv_Gandhi_IT_Expressway(OMR).jpg" target="_blank" rel="noopener">OMR</a> by Nazeem Fasil (CC BY-SA 4.0).</p>
-    <div class="stats">
-      <div class="stat reveal"><b data-count="43">0</b><span>Years leading Pioneer Group, from March 1983 to today.</span></div>
-      <div class="stat reveal" style="--d:100ms"><b data-count="3" data-suffix="M">0</b><span>Square feet of premium commercial and residential space, almost.</span></div>
-      <div class="stat reveal" style="--d:200ms"><b data-count="20" data-suffix="+">0</b><span>Companies led or directed across construction, hospitality, software and more.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- WORK / BENEFITS -->
-<section class="section" id="work">
-  <div class="wrap">
-    <p class="eyebrow reveal">What he does</p>
-    <h2 class="h2 reveal" style="--d:100ms">Design, build and invent, all under one roof.</h2>
+    <p class="label reveal"><span class="mono">04</span>What he does</p>
+    <h2 class="display reveal" style="--d:100ms">Design, build and invent, all under one roof.</h2>
     <div class="build" id="build">
       <div class="build-sticky">
         <canvas id="build3d" role="img" aria-label="3D construction sequence of a tower, from site survey and excavation to the finished building"></canvas>
@@ -190,22 +199,42 @@
       </div>
     </div>
 
-    <h2 class="h2 reveal" style="margin-top:96px">Beyond buildings.</h2>
-    <p class="lead reveal" style="margin-top:16px">His curiosity did not stop at construction. He designed machines, wrote systems and gave the industry a common language for its materials.</p>
-    <div class="cards">
-      <article class="card reveal"><div class="ic"><i class="ph ph-wall"></i></div><h3>KWALL</h3><p>Lightweight hollow core wall panels developed in 2014, with machinery he designed to make different types of acoustic wall panels.</p></article>
-      <article class="card reveal" style="--d:100ms"><div class="ic"><i class="ph ph-presentation-chart"></i></div><h3>Sales and marketing software</h3><p>Real estate marketing and sales solutions.</p></article>
-      <article class="card reveal" style="--d:200ms"><div class="ic"><i class="ph ph-blueprint"></i></div><h3>Drawings and projects</h3><p>Digital drawing management, project activity management and software activity management platforms.</p></article>
-      <article class="card reveal" style="--d:300ms"><div class="ic"><i class="ph ph-barcode"></i></div><h3>A unique coding system</h3><p>One database and coding system for construction materials, machinery, tools, electrical materials, building equipment and auxiliaries.</p></article>
+    <h2 class="display reveal" style="margin-top:96px">Beyond buildings.</h2>
+    <p class="lead reveal" style="--d:100ms">His curiosity did not stop at construction. He designed machines, wrote systems and gave the industry a common language for its materials.</p>
+    <div class="bento-d">
+      <article class="tile t-kwall reveal"><p class="mono">2014</p><h3>KWALL</h3><p>Lightweight hollow core wall panels, with machinery he designed to make different types of acoustic wall panels.</p><i class="ph ph-wall"></i></article>
+      <article class="tile reveal" style="--d:100ms"><i class="ph ph-presentation-chart"></i><h4>Sales and marketing software</h4><p>Real estate marketing and sales solutions.</p></article>
+      <article class="tile reveal" style="--d:200ms"><i class="ph ph-blueprint"></i><h4>Drawings and projects</h4><p>Digital drawing, project activity and software activity management platforms.</p></article>
+      <article class="tile t-wide reveal" style="--d:100ms"><i class="ph ph-barcode"></i><h4>A unique coding system</h4><p>One database and coding system for construction materials, machinery, tools, electrical materials, building equipment and auxiliaries.</p></article>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section terr" id="faq">
+<!-- TERRITORY -->
+<section class="section terr" id="territory" data-nav="light">
   <div class="wrap">
-    <p class="eyebrow reveal">Questions</p>
-    <h2 class="h2 reveal" style="--d:100ms">What people ask before they reach out.</h2>
+    <p class="label reveal"><span class="mono">05</span>Territory</p>
+    <h2 class="display reveal" style="--d:100ms">Chennai, mapped one neighbourhood at a time.</h2>
+    <p class="lead reveal" style="--d:200ms">Eight corners of the city that shape his thinking. Coordinates are the real centre of each neighbourhood.</p>
+    <ul class="plots">
+      <li class="lot reveal"><figure class="lot-img"><img src="assets/places/mylapore.jpg" alt="Kapaleeshwarar Temple and its tank in Mylapore, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 01</span><i class="ph ph-corners-out"></i></div><div><h3>Mylapore</h3><p>Heritage streets where every title has a long history.</p><div class="c mono">13.0368° N, 80.2676° E</div></div></div></li>
+      <li class="lot reveal" style="--d:80ms"><figure class="lot-img"><img src="assets/places/tnagar.jpg" alt="Crowded shopping street in T. Nagar, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 02</span><i class="ph ph-corners-out"></i></div><div><h3>T. Nagar</h3><p>The densest commercial grid in the city.</p><div class="c mono">13.0418° N, 80.2341° E</div></div></div></li>
+      <li class="lot reveal" style="--d:160ms"><figure class="lot-img"><img src="assets/places/adyar.jpg" alt="Adyar river estuary, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 03</span><i class="ph ph-corners-out"></i></div><div><h3>Adyar</h3><p>Green, quiet and fiercely sought after.</p><div class="c mono">13.0012° N, 80.2565° E</div></div></div></li>
+      <li class="lot reveal" style="--d:240ms"><figure class="lot-img"><img src="assets/places/annanagar.jpg" alt="Anna Nagar Tower Park, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 04</span><i class="ph ph-corners-out"></i></div><div><h3>Anna Nagar</h3><p>Planned avenues and long term family demand.</p><div class="c mono">13.0850° N, 80.2101° E</div></div></div></li>
+      <li class="lot reveal"><figure class="lot-img"><img src="assets/places/guindy.jpg" alt="Green canopy of Guindy National Park, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 05</span><i class="ph ph-corners-out"></i></div><div><h3>Guindy</h3><p>Where industry, transit and offices meet.</p><div class="c mono">13.0067° N, 80.2206° E</div></div></div></li>
+      <li class="lot reveal" style="--d:80ms"><figure class="lot-img"><img src="assets/places/velachery.jpg" alt="Sunset over Velachery, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 06</span><i class="ph ph-corners-out"></i></div><div><h3>Velachery</h3><p>Fast growth, tight supply, steady rentals.</p><div class="c mono">12.9815° N, 80.2180° E</div></div></div></li>
+      <li class="lot reveal" style="--d:160ms"><figure class="lot-img"><img src="assets/places/porur.jpg" alt="Porur lake and flyover, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 07</span><i class="ph ph-corners-out"></i></div><div><h3>Porur</h3><p>The western gateway, built for new households.</p><div class="c mono">13.0382° N, 80.1565° E</div></div></div></li>
+      <li class="lot reveal" style="--d:240ms"><figure class="lot-img"><img src="assets/places/omr.jpg" alt="Evening traffic on Old Mahabalipuram Road, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 08</span><i class="ph ph-corners-out"></i></div><div><h3>OMR</h3><p>The IT corridor that redrew the map of Chennai.</p><div class="c mono">12.9010° N, 80.2279° E</div></div></div></li>
+    </ul>
+    <p class="credits">Photos from Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Kapaleeshwarar_Temple,_Mylapore,_Chennai,_India.jpg" target="_blank" rel="noopener">Mylapore</a> by N. Vivekananthamoorthy (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Diwali_Urban_Shopping,_Thiyagaraja_Nagar,_Chennai.jpg" target="_blank" rel="noopener">T. Nagar</a> by Arunsarv (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:River_adyar_estuary,chennai,tamilnadu_-_panoramio.jpg" target="_blank" rel="noopener">Adyar</a> by rajaraman sundaram (CC BY 3.0) · <a href="https://commons.wikimedia.org/wiki/File:Anna_Nagar_Tower_Park_From_Entrance_20Jan2013.jpg" target="_blank" rel="noopener">Anna Nagar</a> by Rasnaboy (CC BY-SA 3.0) · <a href="https://commons.wikimedia.org/wiki/File:View_of_Guindy_National_Park,_Chennai.png" target="_blank" rel="noopener">Guindy</a> by Ara C (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Sunset_at_Velachery_Chennai.jpg" target="_blank" rel="noopener">Velachery</a> by Fioselvan (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Porur_Lake_and_flyover.jpg" target="_blank" rel="noopener">Porur</a> by The EnforcerOffice of the secret service (CC BY 3.0) · <a href="https://commons.wikimedia.org/wiki/File:Rajiv_Gandhi_IT_Expressway(OMR).jpg" target="_blank" rel="noopener">OMR</a> by Nazeem Fasil (CC BY-SA 4.0).</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq" data-nav="light">
+  <div class="wrap">
+    <p class="label reveal"><span class="mono">06</span>Questions</p>
+    <h2 class="display reveal" style="--d:100ms">What people ask before they reach out.</h2>
     <div class="faq-list reveal">
       <details><summary>Who is Sarath Kakumanu?<i class="ph ph-plus"></i></summary><p>An entrepreneur with over five decades of experience in design and construction management, and the founder of Pioneer Group in Chennai.</p></details>
       <details><summary>What is Pioneer Group?<i class="ph ph-plus"></i></summary><p>One of the most respected real estate houses in Chennai. Sarath Kakumanu has been its Managing Director since March 1983.</p></details>
@@ -217,30 +246,31 @@
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="section final" id="connect">
+<!-- CONNECT -->
+<section class="section connect" id="connect" data-nav="dark">
   <div class="wrap">
-    <p class="eyebrow reveal">Next step</p>
-    <h2 class="h2 reveal" style="--d:100ms;margin-top:16px">Have land, a project or an idea? Let's talk.</h2>
-    <p class="lead reveal" style="--d:200ms">One message to Sarath is the start of a straight conversation with someone who has built, engineered and invented in this industry for over fifty years.</p>
-    <div class="hero-cta reveal" style="--d:300ms">
-      <a class="btn btn-primary" href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i>Connect with Sarath</a>
+    <p class="label reveal"><span class="mono">07</span>Connect</p>
+    <h2 class="mega-cta reveal" style="--d:100ms">Have land, a project or an idea? Let's talk.</h2>
+    <div class="hero-cta reveal" style="--d:200ms">
+      <a class="btn btn-gold" href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i>Connect with Sarath</a>
     </div>
-    <p class="risk reveal" style="--d:400ms">Free first conversation. No obligation.</p>
+    <p class="risk reveal" style="--d:300ms">Free first conversation. No obligation.</p>
   </div>
 </section>
 </main>
 
-<footer>
-  <div class="wrap">
+<footer data-nav="dark">
+  <div class="wrap foot">
     <span>© 2026 Sarath Kakumanu. Chennai, India.</span>
     <nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener">LinkedIn</a></nav>
   </div>
+  <p class="foot-name" aria-hidden="true">Sarath Kakumanu</p>
 </footer>
 
 <script src="https://unpkg.com/three@0.149.0/build/three.min.js"></script>
 <script src="build3d.js"></script>
 <script src="main.js"></script>
+<script src="hero.js"></script>
 <script src="scene.js"></script>
 </body>
 </html>

@@ -17,12 +17,12 @@
   background: rgba(255,255,255,.74); backdrop-filter: blur(28px) saturate(180%); -webkit-backdrop-filter: blur(28px) saturate(180%);
   border: 1px solid rgba(255,255,255,.9); box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 24px 64px rgba(0,0,0,.28); color: #16140f; }
 .beat .eyebrow { color: #a86f00; }
-.beat h2 { margin-top: var(--s-100); font-size: 36px; line-height: 40px; }
+.beat h2 { margin-top: var(--s-100); font-size: 44px; line-height: 44px; font-family: var(--display); }
 .beat p:last-child { margin-top: var(--s-200); font-size: 18px; line-height: 28px; color: #5f5b50; }
 @media (min-width: 900px) {
   .beat { top: 50%; bottom: auto; right: auto; left: calc((100vw - min(1200px, 100vw)) / 2 + var(--pad)); max-width: 600px; }
   .beat-b { left: auto; right: calc((100vw - min(1200px, 100vw)) / 2 + var(--pad) + 40px); }
-  .beat h2 { font-size: 60px; line-height: 1; }
+  .beat h2 { font-size: 72px; line-height: 1; }
   .beat p:last-child { font-size: 20px; line-height: 28px; }
 }
 .scene.is-static { height: auto; }
@@ -40,7 +40,7 @@
 .timeline::after { background: var(--brass); transform-origin: 50% 0; transform: scaleY(var(--tl, 0)); }
 .tl { position: relative; display: grid; grid-template-columns: var(--yrw) 1fr; column-gap: var(--gap); align-items: start; }
 .tl::before { content: ""; position: absolute; top: 12px; left: calc(var(--yrw) + var(--gap) / 2 - 6px); width: 12px; height: 12px; border-radius: 9999px; background: var(--brass); box-shadow: 0 0 0 4px var(--bg); z-index: 1; }
-.yr { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 30px; line-height: 36px; color: var(--brass); letter-spacing: -.01em; text-align: right; }
+.yr { font-family: var(--display); font-weight: 400; font-size: 36px; line-height: 40px; color: var(--brass); letter-spacing: -.01em; text-align: right; }
 @media (min-width: 768px) { .yr { font-size: 36px; line-height: 40px; } }
 .tl-card { padding: var(--s-300); border-radius: 16px; background: rgba(255,255,255,.58); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255,255,255,.9); box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 12px 32px rgba(22,20,15,.07); transition: transform 500ms var(--ease), box-shadow 500ms var(--ease); }
 @media (hover: hover) and (pointer: fine) { .tl-card:hover { transform: translateX(4px); box-shadow: 0 1px 0 #fff inset, 0 16px 40px rgba(22,20,15,.1); } }
