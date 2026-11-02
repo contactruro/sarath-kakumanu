@@ -15,10 +15,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Manrope:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-<link rel="stylesheet" href="site.css?v=5">
-<link rel="stylesheet" href="scene.css?v=5">
-<link rel="stylesheet" href="world.css?v=6">
-<link rel="stylesheet" href="build.css?v=5">
+<link rel="stylesheet" href="site.css?v=8">
+<link rel="stylesheet" href="scene.css?v=8">
+<link rel="stylesheet" href="world.css?v=8">
+<link rel="stylesheet" href="build.css?v=8">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Sarath Kakumanu","jobTitle":"Founder, Pioneer Group and UEducate Global","description":"Architect with over five decades of experience. Built almost 3 million square feet of premium commercial and residential projects in Tamil Nadu and Andhra Pradesh. Developer of KWALL wall panels. Founder of UEducate Global, the company behind the KATBOOK digital textbook format.","alumniOf":"University of Madras","homeLocation":{"@type":"Place","name":"Chennai, India"},"sameAs":["https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/"]}
 </script>
@@ -54,11 +54,8 @@
 <!-- WORLD HERO -->
 <section class="world" id="top" data-nav="dark" aria-label="Sarath Kakumanu, a guided journey through his career">
   <div class="world-sticky" id="worldStage">
-    <div class="cam" id="cam">
-      <img class="art" id="art" src="assets/india-world-2x.webp?v=2" alt="Illustrated vista of India at sunset: the Red Fort, a southern temple tower, the Taj Mahal, a hill fort and a lake, with Sarath Kakumanu standing on stone steps in the foreground" width="3424" height="1838">
-      <div class="night-tint"></div>
-    </div>
-    <div class="world-shade" id="worldShade"></div>
+    <canvas class="w-canvas" id="wCanvas" role="img" aria-label="Illustrated vista of India at sunset: the Red Fort, a southern temple tower, the Taj Mahal, a hill fort and a lake, with Sarath Kakumanu standing on stone steps in the foreground"></canvas>
+    <div class="pins" id="pins"></div>
 
     <div class="w-title" id="wTitle">
       <div class="wrap">
@@ -68,7 +65,6 @@
     </div>
 
     <h1 class="w-name" id="wName"><span class="l">Sarath</span><span class="r">Kakumanu</span></h1>
-    <img class="w-portrait" id="wPortrait" src="assets/sarath-full.webp?v=1" width="625" height="1945" alt="Sarath Kakumanu, architect and founder of Pioneer Group and UEducate Global, in a dark blazer with arms crossed">
 
     <article class="w-card" id="wCard" aria-live="polite"></article>
 
@@ -120,31 +116,6 @@
       <figure class="b-photo reveal"><img src="assets/sarath-group.jpg" alt="Sarath Kakumanu with two colleagues in an office" loading="lazy"><figcaption class="mono">With colleagues</figcaption></figure>
       <div class="b-stat reveal" style="--d:100ms"><b data-count="43">0</b><span>Years leading Pioneer Group, from March 1983 to today.</span></div>
       <div class="b-stat reveal" style="--d:200ms"><b data-count="20" data-suffix="+">0</b><span>Companies led or directed across construction, hospitality, software and more.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- NUMBERS SCENE -->
-<section class="scene" id="story" data-nav="dark" aria-label="Sarath Kakumanu in numbers">
-  <div class="scene-sticky">
-    <video class="scene-video" id="sceneVideo" src="assets/story-scrub.mp4" poster="assets/story-poster.jpg" muted playsinline preload="auto" aria-label="Architectural model of a modern villa resting on its floor plans"></video>
-    <div class="scene-scrim"></div>
-    <div class="scene-rail" aria-hidden="true"><i id="sceneFill"></i></div>
-    <p class="scene-count mono" aria-hidden="true"><span id="sceneNum">01</span> / 03</p>
-    <div class="beat beat-a" data-beat="0">
-      <p class="eyebrow">Leadership</p>
-      <h2>43 years at the helm of Pioneer Group.</h2>
-      <p>Managing Director in Chennai from March 1983 to today, in construction management.</p>
-    </div>
-    <div class="beat beat-b" data-beat="1">
-      <p class="eyebrow">Delivered</p>
-      <h2>Almost 3 million square feet.</h2>
-      <p>Premium, luxury commercial and residential projects, built to the standard of a founder who still cares.</p>
-    </div>
-    <div class="beat beat-c" data-beat="2">
-      <p class="eyebrow">Footprint</p>
-      <h2>Two states, one reputation.</h2>
-      <p>Tamil Nadu and Andhra Pradesh, with Chennai at the centre of it all.</p>
     </div>
   </div>
 </section>
@@ -317,9 +288,9 @@
 </footer>
 
 <script src="https://unpkg.com/three@0.149.0/build/three.min.js"></script>
-<script src="build3d.js?v=5"></script>
-<script src="main.js?v=5"></script>
-<script src="world.js?v=5"></script>
-<script src="scene.js?v=5"></script>
+<script src="build3d.js?v=8"></script>
+<script src="main.js?v=8"></script>
+<script src="world.js?v=8"></script>
+<script src="scene.js?v=8"></script>
 </body>
 </html>

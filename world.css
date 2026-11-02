@@ -1,23 +1,22 @@
 /* Illustrated world hero: a camera that flies through the illustration, one landmark per chapter. Flat colours only. */
 .world { position: relative; height: calc(100svh + 700vh); background: #1b1230; }
 .world-sticky { position: sticky; top: 0; height: 100svh; overflow: hidden; color: #f6f1e3; background: #1b1230; }
-.cam { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; --inv: 1; }
-.art { width: 100%; height: 100%; display: block; max-width: none; transition: filter 1200ms var(--ease); user-select: none; -webkit-user-drag: none; }
-.night-tint { position: absolute; inset: 0; background: rgba(20,16,70,.45); mix-blend-mode: multiply; opacity: 0; transition: opacity 1200ms var(--ease); pointer-events: none; }
-.world[data-time="night"] .art { filter: brightness(.62) saturate(1.2) contrast(1.06); }
-.world[data-time="night"] .night-tint { opacity: 1; }
-.world-shade { position: absolute; inset: 0; background: rgba(19,18,9,1); opacity: 0; pointer-events: none; }
-
-/* Pins live inside the camera so they sit exactly on their landmark */
-.pin { position: absolute; left: var(--x); top: var(--y); transform: translate(-9px, -50%) scale(var(--inv)); transform-origin: 9px 50%; display: flex; align-items: center; gap: var(--s-75); padding: 0; border: 0; background: none; color: #fff; cursor: pointer; font: inherit; }
-.pin-dot { position: relative; width: 18px; height: 18px; border-radius: 9999px; background: #f7c548; border: 3px solid #fff; box-shadow: 0 2px 10px rgba(0,0,0,.45); flex-shrink: 0; transition: transform 500ms var(--ease), background 500ms var(--ease); }
+.world[data-time="night"] .world[data-time="night"] 
+/* Pins are zero size anchors that JS moves onto their landmark every frame */
+.w-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.pins { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+.pin { position: absolute; left: 0; top: 0; width: 0; height: 0; padding: 0; border: 0; background: none; color: #fff; cursor: pointer; font: inherit; will-change: transform; transition: opacity 400ms var(--ease); }
+.pin > * { pointer-events: auto; }
+.pin-dot { position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 9999px; background: #f7c548; border: 3px solid #fff; box-shadow: 0 2px 10px rgba(0,0,0,.45); transition: transform 500ms var(--ease), background 500ms var(--ease); }
 .pin-dot::after { content: ""; position: absolute; inset: -9px; border-radius: 9999px; border: 2px solid #f7c548; opacity: 0; animation: ping 2.4s var(--ease) infinite; }
 @keyframes ping { 0% { transform: scale(.5); opacity: .9; } 100% { transform: scale(1.5); opacity: 0; } }
-.pin-label { padding: var(--s-50) var(--s-100); border-radius: 8px; background: rgba(19,18,9,.66); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.28); font-size: 13px; line-height: 16px; font-weight: 600; white-space: nowrap; opacity: 0; transform: translateX(-6px); transition: opacity 500ms var(--ease), transform 500ms var(--ease); pointer-events: none; }
+.pin-label { position: absolute; left: 20px; top: -12px; padding: var(--s-50) var(--s-100); border-radius: 8px; background: rgba(19,18,9,.66); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.28); font-size: 13px; line-height: 16px; font-weight: 600; white-space: nowrap; opacity: 0; transform: translateX(-6px); transition: opacity 500ms var(--ease), transform 500ms var(--ease); }
+.pin.flip .pin-label { left: auto; right: 20px; transform: translateX(6px); }
 .world[data-view="vista"] .pin-label, .pin.on .pin-label { opacity: 1; transform: none; }
 @media (hover: hover) and (pointer: fine) { .pin:hover .pin-label { opacity: 1; transform: none; } .pin:hover .pin-dot { transform: scale(1.25); } }
 .pin.on .pin-dot { background: #fff; border-color: #f7c548; }
-.pin:focus-visible { outline-offset: 8px; }
+.pin:focus-visible { outline: none; }
+.pin:focus-visible .pin-dot { outline: 2px solid #fff; outline-offset: 4px; }
 @media (max-width: 799px) { .world[data-view="vista"] .pin-label { opacity: 0; } .pin.on .pin-label { opacity: 1; } }
 
 /* Title over the tree canopy */
@@ -37,8 +36,7 @@
 .w-name span { font-size: clamp(56px, 11vw, 190px); line-height: .9; letter-spacing: -.03em; color: #f6f1e3; will-change: transform; }
 .w-name .l { justify-self: end; text-align: right; }
 .w-name .r { justify-self: start; grid-column: 3; }
-.w-portrait { position: absolute; z-index: 5; left: 50%; bottom: 52px; height: 88svh; width: auto; max-width: none; transform: translate(-50%, 105%); pointer-events: none; will-change: transform; filter: drop-shadow(0 24px 48px rgba(0,0,0,.5)); }
-@media (max-width: 799px) { .w-name { grid-template-columns: 1fr; align-content: start; justify-items: center; padding-top: 14svh; } .w-name span { font-size: 17vw; grid-column: 1; justify-self: center; text-align: center; } .w-portrait { height: 76svh; bottom: 0; } }
+@media (max-width: 799px) { .w-name { grid-template-columns: 1fr; align-content: start; justify-items: center; padding-top: 14svh; } .w-name span { font-size: 17vw; grid-column: 1; justify-self: center; text-align: center; } }
 
 /* Chapter card */
 .w-card { position: absolute; z-index: 6; left: var(--s-300); bottom: var(--s-300); width: min(440px, calc(100% - 48px)); padding: var(--s-300); border-radius: 16px; opacity: 0; background: rgba(255,255,255,.8); backdrop-filter: blur(28px) saturate(180%); -webkit-backdrop-filter: blur(28px) saturate(180%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 24px 64px rgba(0,0,0,.35); color: #131209; will-change: transform, opacity; }
@@ -86,7 +84,4 @@
   .w-card, .w-dots, .w-map { display: none; }
 }
 
-.pin.flip { flex-direction: row-reverse; transform: translate(calc(-100% + 9px), -50%) scale(var(--inv)); transform-origin: calc(100% - 9px) 50%; }
-.pin.flip .pin-label { transform: translateX(6px); }
-.world[data-view="vista"] .pin.flip .pin-label, .pin.flip.on .pin-label { transform: none; }
 @media (max-width: 767px) { .w-title { top: 132px; } .w-cue { width: calc(100% - 32px); justify-content: center; text-align: center; } }
