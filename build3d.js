@@ -157,7 +157,9 @@ for (let k = -9; k <= 9; k++) {
   canvas.addEventListener('pointerup', end); canvas.addEventListener('pointercancel', end);
   new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { rootMargin: '200px' }).observe(stage);
 
+  const LOOP = wrap.hasAttribute('data-loop');   // self playing mode for the project window
   function readScroll() {
+    if (LOOP) return;
     const r = wrap.getBoundingClientRect();
     pTarget = clamp(-r.top / (wrap.offsetHeight - stage.offsetHeight));
   }
@@ -218,7 +220,8 @@ for (let k = -9; k <= 9; k++) {
   function frame() {
     requestAnimationFrame(frame);
     if (!visible) return;
-    p = reduce ? pTarget : lerp(p, pTarget, 0.12);
+    if (LOOP) { const c = ((performance.now() - t0) / 1000) % 22; pTarget = reduce ? 1 : clamp(c / 18); }
+    p = reduce ? pTarget : lerp(p, pTarget, LOOP && pTarget < 0.01 ? 0.06 : 0.12);
     if (Math.abs(p - pTarget) < 0.0005) p = pTarget;
     if (!dragging) { offset += vel; vel *= 0.94; offset *= 0.995; }
     update();

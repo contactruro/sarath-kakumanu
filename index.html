@@ -13,10 +13,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131209'/%3E%3Cpath d='M14 50V28L32 14l18 14v22H38V36H26v14z' fill='%23f7c548'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Manrope:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Manrope:wght@400;500;600;700&family=Archivo:wght@400;500;600;700;800&family=Homemade+Apple&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 <link rel="stylesheet" href="site.css?v=9">
 <link rel="stylesheet" href="scene.css?v=9">
+<link rel="stylesheet" href="paper.css?v=3">
 <link rel="stylesheet" href="world.css?v=9">
 <link rel="stylesheet" href="build.css?v=9">
 <script type="application/ld+json">
@@ -30,7 +31,7 @@
   <div class="nav-bar wrap">
     <a class="brand" href="#top" aria-label="Sarath Kakumanu, home">Sarath Kakumanu</a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#about">About</a><a href="#top">Journey</a><a href="#education">Education</a><a href="#press">Press</a><a href="#work">Work</a><a href="#territory">Territory</a><a href="#faq">FAQ</a>
+      <a href="#top">Journey</a><a href="#about">About</a><a href="#work">Work</a><a href="#education">Education</a><a href="#press">Press</a><a href="#territory">Places</a><a href="#faq">FAQ</a>
     </nav>
     <a class="nav-cta" href="#connect">Connect</a>
     <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
@@ -38,13 +39,12 @@
 </header>
 <div class="menu" id="menu" aria-hidden="true">
   <ul>
-    <li><a href="#about"><span>About</span></a></li>
     <li><a href="#top"><span>Journey</span></a></li>
+    <li><a href="#about"><span>About</span></a></li>
+    <li><a href="#work"><span>Work</span></a></li>
     <li><a href="#education"><span>Education</span></a></li>
     <li><a href="#press"><span>Press</span></a></li>
-    <li><a href="#work"><span>Work</span></a></li>
-    <li><a href="#territory"><span>Territory</span></a></li>
-    <li><a href="#faq"><span>FAQ</span></a></li>
+    <li><a href="#territory"><span>Places</span></a></li>
     <li><a href="#connect"><span>Connect</span></a></li>
   </ul>
 </div>
@@ -77,189 +77,148 @@
 </section>
 
 <!-- MARQUEE -->
-<div class="marquee" data-nav="dark" aria-label="Companies">
-  <div class="marquee-track">
-    <span>Pioneer Group</span><i></i><span>UEducate Global</span><i></i><span>KATBOOK</span><i></i><span>NCERT</span><i></i><span>KWALL</span><i></i><span>KPOST</span><i></i><span>KSMACC</span><i></i>
-    <span aria-hidden="true">Pioneer Group</span><i></i><span aria-hidden="true">UEducate Global</span><i></i><span aria-hidden="true">KATBOOK</span><i></i><span aria-hidden="true">NCERT</span><i></i><span aria-hidden="true">KWALL</span><i></i><span aria-hidden="true">KPOST</span><i></i><span aria-hidden="true">KSMACC</span><i></i>
-  </div>
-</div>
-
 <!-- ABOUT -->
-<section class="section about" id="about" data-nav="light">
-  <div class="wrap about-grid">
-    <div class="about-copy">
-      <p class="label reveal"><span class="mono">01</span>About</p>
-      <p class="statement reveal" style="--d:100ms">An architect who built Chennai, and now builds the future of the classroom.</p>
-      <div class="about-cols">
-        <p class="reveal" style="--d:150ms">He holds a bachelor's in architecture from the University of Madras and pursued architecture and urban planning in the USA. Over five decades he built Pioneer Group, one of the most respected real estate houses in Chennai: almost 3 million square feet of premium commercial and residential projects across Tamil Nadu and Andhra Pradesh.</p>
-        <p class="reveal" style="--d:200ms">Curiosity took him further. In 2014 he developed KWALL wall panels, and he spent close to three decades writing software, from construction management systems to KPOST, KSMACC and UEducate, the platform behind KATBOOK and the NCERT partnership.</p>
-      </div>
-      <dl class="facts">
-        <div class="reveal"><dt class="mono">Since 1983</dt><dd>Managing Director, Pioneer Group</dd></div>
-        <div class="reveal" style="--d:80ms"><dt class="mono">2014</dt><dd>Developed KWALL wall panels</dd></div>
-        <div class="reveal" style="--d:160ms"><dt class="mono">Aug 2025</dt><dd>NCERT signs an MoU to adopt KATBOOK</dd></div>
-      </dl>
-    </div>
-    <div class="about-photos">
-      <figure class="ph-a reveal" data-speed="0.06"><img src="assets/sarath-portrait.jpg" alt="Smiling portrait of Sarath Kakumanu" loading="lazy"></figure>
-      <figure class="ph-b reveal" style="--d:150ms" data-speed="-0.05"><img src="assets/sarath-casual.jpg" alt="Sarath Kakumanu in a checked shirt" loading="lazy"></figure>
-    </div>
-  </div>
-</section>
-
-<!-- MOMENTS -->
-<section class="section moments" data-nav="light">
-  <div class="wrap">
-    <p class="label reveal"><span class="mono">02</span>Moments</p>
-    <h2 class="display reveal" style="--d:100ms">The person behind the projects.</h2>
-    <div class="bento-l">
-      <figure class="b-photo reveal"><img src="assets/sarath-group.jpg" alt="Sarath Kakumanu with two colleagues in an office" loading="lazy"><figcaption class="mono">With colleagues</figcaption></figure>
-      <div class="b-stat reveal" style="--d:100ms"><b data-count="43">0</b><span>Years leading Pioneer Group, from March 1983 to today.</span></div>
-      <div class="b-stat reveal" style="--d:200ms"><b data-count="20" data-suffix="+">0</b><span>Companies led or directed across construction, hospitality, software and more.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- TAGLINE -->
-<section class="section tagline" data-nav="light" aria-label="Tagline">
-  <div class="wrap">
-    <p class="tagline-text" id="tagline" data-hl="lessons">Chennai's builder is now turning India's textbooks into living lessons.</p>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section class="section edu" id="education" data-nav="dark">
-  <div class="wrap">
-    <p class="label reveal"><span class="mono">03</span>Education</p>
-    <h2 class="display reveal" style="--d:100ms">From skylines to classrooms.</h2>
-    <p class="lead reveal" style="--d:200ms">Sarath leads UEducate Global, the Chennai company behind KATBOOK, a digital book format that wraps every textbook in videos, 3D models, virtual labs and AI tools.</p>
-
-    <div class="edu-top">
-      <article class="ncert-card reveal">
-        <p class="mono">NCERT x UEducate · August 2025</p>
-        <h3>NCERT signs an MoU to turn its textbooks into KATBOOKs.</h3>
-        <p>The agreement, signed at NCERT's headquarters in New Delhi, covers converting the council's curriculum into interactive digital books. Pilots begin in select states, followed by nationwide implementation over the next 18 months. Sarath called it a defining moment in the effort to reimagine Indian education.</p>
-        <ul class="chips-d">
-          <li>Concept videos</li><li>3D models</li><li>Virtual labs</li><li>AI tools</li><li>Translator</li><li>Audiobook</li><li>Works offline</li>
-        </ul>
-        <div class="hero-cta">
-          <a class="btn btn-gold" href="https://explorencertkatbook.com/?lang=en" target="_blank" rel="noopener">Explore NCERT KATBOOK <i class="ph ph-arrow-up-right"></i></a>
-          <a class="btn btn-line" href="https://apps.apple.com/in/app/ncert-katbook/id6753007971" target="_blank" rel="noopener"><i class="ph ph-apple-logo"></i>App Store</a>
+<section class="pp grid about" id="about" data-nav="light">
+  <div class="pp-wrap">
+    <p class="script reveal">a little about him <span class="spark"></span></p>
+    <h2 class="pp-h reveal" style="--d:80ms">An architect who built Chennai, and now builds how <span class="hl-l">India learns.</span></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="reveal">He holds a bachelor's in architecture from the University of Madras and pursued architecture and urban planning in the USA. Over five decades he built Pioneer Group, one of the most respected real estate houses in Chennai: almost 3 million square feet of premium commercial and residential projects across Tamil Nadu and Andhra Pradesh.</p>
+        <p class="reveal">Curiosity took him further. In 2014 he developed KWALL wall panels, and he spent close to three decades writing software, from construction management systems to KPOST, KSMACC and UEducate, the platform behind KATBOOK and the NCERT partnership.</p>
+        <div class="sel reveal">Architect · Builder · Educator<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="cursor"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 2l20 9-8.5 2.5L12 22z" fill="#8f73d6" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg><span>Sarath</span></span></div>
+        <div class="notes">
+          <div class="note reveal" style="--r:-3deg"><b>1983</b>Pioneer Group begins</div>
+          <div class="note l reveal" style="--r:2deg;--d:80ms"><b>3M</b>sq ft built, almost</div>
+          <div class="note p reveal" style="--r:-2deg;--d:160ms"><b>20+</b>companies led</div>
         </div>
-      </article>
-      <div class="edu-stats">
-        <div class="e-stat reveal" style="--d:100ms"><b>250M</b><span>Students the offline KATBOOKs are meant to reach across India.</span></div>
-        <div class="e-stat reveal" style="--d:200ms"><b>18</b><span>Months planned for nationwide rollout after the state pilots.</span></div>
       </div>
-    </div>
-
-    <h3 class="eco-title reveal">One ecosystem for teaching and learning</h3>
-    <div class="eco">
-      <article class="tile reveal"><i class="ph ph-books"></i><h4>KATBOOK</h4><p>The collaborative digital book. UTEACH gives teachers ready content and lesson plans. ULEARN lets students learn at their own pace and raise doubts inside the book.</p></article>
-      <article class="tile reveal" style="--d:80ms"><i class="ph ph-student"></i><h4>KAMPUS</h4><p>Institution management for any campus: timetables, student and staff data, multiple curricula and a link to KATBOOKs.</p></article>
-      <article class="tile reveal" style="--d:160ms"><i class="ph ph-chats-circle"></i><h4>KSMACC</h4><p>A closed, encrypted communication platform for schools and institutions, with patented Katchup messaging and Kall calling.</p></article>
-      <article class="tile reveal" style="--d:240ms"><i class="ph ph-graduation-cap"></i><h4>USTUDY</h4><p>An e-learning platform with a work study model. Its KAcademy supports board exams and entrance exams such as NEET and JEE.</p></article>
-    </div>
-    <p class="credits-d">Product details from UEducate's own website. Press details from SMEStreet, Education21 and EducationWorld, listed below.</p>
-  </div>
-</section>
-
-<!-- PRESS -->
-<section class="section press" id="press" data-nav="light">
-  <div class="wrap">
-    <p class="label reveal"><span class="mono">04</span>Press</p>
-    <h2 class="display reveal" style="--d:100ms">In the media.</h2>
-    <p class="lead reveal" style="--d:200ms">A live KATBOOK demo with Sarath, and the coverage of the NCERT partnership.</p>
-    <div class="press-grid">
-      <figure class="yt reveal">
-        <button class="yt-btn" type="button" data-yt="QN-MqjNQ-3E" aria-label="Play video: KatBook live demo with Sarath Kakumanu on Behindwoods Air">
-          <img src="https://i.ytimg.com/vi/QN-MqjNQ-3E/hqdefault.jpg" alt="Thumbnail of the Behindwoods Air video on KATBOOK" loading="lazy">
-          <span class="yt-play"><i class="ph ph-play"></i></span>
-        </button>
-        <figcaption><span class="mono">Behindwoods Air · Nov 2025 · 24 min</span><b>Traditional vs digital learning: KatBook live demo</b></figcaption>
-      </figure>
-      <div class="arts">
-        <a class="art reveal" style="--d:100ms" href="https://smestreet.in/education/ncert-signs-mou-with-ueducate-to-transform-national-curriculum-into-interactive-digital-books-9684261" target="_blank" rel="noopener"><span class="mono">SMEStreet · 21 Aug 2025</span><b>NCERT signs MoU with UEducate to transform the national curriculum into interactive digital books</b><i class="ph ph-arrow-up-right"></i></a>
-        <a class="art reveal" style="--d:180ms" href="https://education21.in/ncert-signs-mou-with-ueducate-to-convert-textbooks-into-interactive-digital-books/" target="_blank" rel="noopener"><span class="mono">Education21 · 19 Aug 2025</span><b>NCERT signs MoU with UEducate to convert textbooks into interactive digital books</b><i class="ph ph-arrow-up-right"></i></a>
-        <a class="art reveal" style="--d:260ms" href="https://educationworld.in/education-briefs-49/" target="_blank" rel="noopener"><span class="mono">EducationWorld · 25 Sep 2025</span><b>Education briefs: NCERT and UEducate Global to digitise the curriculum in KATBOOK format</b><i class="ph ph-arrow-up-right"></i></a>
+      <div class="collage">
+        <figure class="polaroid drag reveal p1"><span class="tape"></span><img src="assets/sarath-portrait.jpg" alt="Smiling portrait of Sarath Kakumanu" loading="lazy"><figcaption>sarath.jpg</figcaption></figure>
+        <figure class="polaroid drag reveal p2" style="--d:120ms"><span class="tape"></span><img src="assets/sarath-casual.jpg" alt="Sarath Kakumanu in a checked shirt" loading="lazy"><figcaption>casual.jpg</figcaption></figure>
+        <figure class="polaroid drag reveal p3" style="--d:200ms"><span class="tape"></span><img src="assets/sarath-group.jpg" alt="Sarath Kakumanu with two colleagues in an office" loading="lazy"><figcaption>with-colleagues.jpg</figcaption></figure>
+        <img class="st a sticker" src="assets/company/sticker-student.webp" alt="" loading="lazy" width="150">
       </div>
     </div>
   </div>
 </section>
 
 <!-- WORK -->
-<section class="section work" id="work" data-nav="dark">
-  <div class="wrap">
-    <p class="label reveal"><span class="mono">05</span>What he does</p>
-    <h2 class="display reveal" style="--d:100ms">Design, build and invent, all under one roof.</h2>
-    <div class="build" id="build">
-      <div class="build-sticky">
-        <canvas id="build3d" role="img" aria-label="3D construction sequence of a tower, from site survey and excavation to the finished building"></canvas>
-        <div class="build-card swap">
-          <p class="mono" id="bNum">01 / 07</p>
-          <h3 id="bTitle">Survey the land</h3>
-          <p id="bText">Every project starts on the ground: boundaries, levels and soil, walked and verified before a single rupee is committed.</p>
+<section class="pp work" id="work" data-nav="light">
+  <div class="pp-wrap">
+    <p class="script reveal">projects <span class="spark"></span></p>
+    <h2 class="pp-h reveal" style="--d:80ms">things he has <span class="hl-y">built.</span></h2>
+    <p class="lede reveal" style="--d:140ms">Pick an app from the dock. Each one is a chapter: a building company, a wall panel, a national textbook format.</p>
+    <div class="os">
+      <div class="win reveal">
+        <div class="win-bar"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i><span class="win-title" id="winTitle">pioneer-group.app</span></div>
+        <div class="win-body">
+          <div class="pane on" data-pane="0">
+            <div class="build" id="build" data-loop>
+              <div class="build-sticky">
+                <canvas id="build3d" role="img" aria-label="A 3D tower being built on a Chennai plot, from survey and excavation to the finished building"></canvas>
+                <div class="build-card swap"><p class="mono" id="bNum">01 / 07</p><h3 id="bTitle">Survey the land</h3><p id="bText">Every project starts on the ground.</p></div>
+                <div class="build-hud"><div class="pct"><b id="bPct">0</b><span>%</span></div><p class="mono" id="bFloor">Floor 00 / 16</p></div>
+                <ol class="build-phases" aria-hidden="true"><li class="on"><i></i><span>Survey</span></li><li><i></i><span>Excavate</span></li><li><i></i><span>Foundation</span></li><li><i></i><span>Structure</span></li><li><i></i><span>Facade</span></li><li><i></i><span>Finish</span></li><li><i></i><span>District</span></li></ol>
+                <p class="build-hint mono">Plays on a loop · Drag to look around</p>
+              </div>
+            </div>
+          </div>
+          <div class="pane" data-pane="1"><svg class="kwall" viewBox="0 0 800 450" role="img" aria-label="Cross section of a KWALL lightweight hollow core wall panel">
+  <rect x="120" y="90" width="560" height="190" rx="6" fill="#ffe37a" stroke="#111" stroke-width="2.5"/>
+  <g fill="#fbfaff" stroke="#111" stroke-width="2.5">
+    <rect x="150" y="116" width="82" height="138" rx="30"/><rect x="262" y="116" width="82" height="138" rx="30"/><rect x="374" y="116" width="82" height="138" rx="30"/><rect x="486" y="116" width="82" height="138" rx="30"/><rect x="598" y="116" width="52" height="138" rx="24"/>
+  </g>
+  <g stroke="#111" stroke-width="1.5" fill="none"><path d="M120 316v18M680 316v18M120 325h560"/><path d="M706 90h18M706 280h18M715 90v190"/></g>
+  <text x="400" y="352" text-anchor="middle">panel width</text><text x="742" y="190" transform="rotate(90 742 190)" text-anchor="middle">thickness</text>
+  <path d="M190 116 L168 66" stroke="#8f73d6" stroke-width="2"/><text x="82" y="58">hollow core, so it is light</text>
+  <path d="M520 280 L560 330" stroke="#8f73d6" stroke-width="2" fill="none"/><text x="478" y="372">acoustic panel variants</text>
+  <text x="26" y="424" style="font-size:12px;fill:#5b5b66">KWALL · developed 2014 · lightweight hollow core wall panel (illustration)</text>
+</svg></div>
+          <div class="pane" data-pane="2"><img class="fill" src="assets/company/ncert-official.webp" alt="UEducate announcement graphic: NCERT has entered into a landmark MoU with UEducate, shown beside a classroom using digital KATBOOKs" loading="lazy"></div>
+          <div class="pane" data-pane="3"><img class="fill" src="assets/company/kampus-laptop.webp" alt="A teacher using a laptop for school management" loading="lazy"></div>
+          <div class="pane" data-pane="4"><img class="fill" src="assets/company/katbook-tablet.webp" alt="A tablet showing the UEducate learning ecosystem" loading="lazy"></div>
         </div>
-        <div class="build-hud">
-          <div class="pct"><b id="bPct">0</b><span>%</span></div>
-          <p class="mono" id="bFloor">Floor 00 / 16</p>
-        </div>
-        <ol class="build-phases" aria-hidden="true">
-          <li class="on"><i></i><span>Survey</span></li>
-          <li><i></i><span>Excavate</span></li>
-          <li><i></i><span>Foundation</span></li>
-          <li><i></i><span>Structure</span></li>
-          <li><i></i><span>Facade</span></li>
-          <li><i></i><span>Finish</span></li>
-          <li><i></i><span>District</span></li>
-        </ol>
-        <p class="build-hint mono">Scroll to build · Drag to look around</p>
+        <div class="win-foot"><b id="pTitle">Pioneer Group</b><span id="pRole">Founder and Managing Director</span><span id="pStack">Design, construction, delivery</span><span id="pYear">1983 to today</span></div>
       </div>
+      <p class="pdesc" id="pDesc">Almost 3 million square feet of premium, luxury commercial and residential projects across Tamil Nadu and Andhra Pradesh. Watch a tower go from survey to skyline.</p>
+      <nav class="dock" aria-label="Projects" id="dock">
+        <button class="d0" type="button" aria-pressed="true" data-i="0" aria-label="Pioneer Group">P<span class="tip">Pioneer Group</span></button>
+        <button class="d1" type="button" aria-pressed="false" data-i="1" aria-label="KWALL">K<span class="tip">KWALL</span></button>
+        <button class="d2" type="button" aria-pressed="false" data-i="2" aria-label="KATBOOK with NCERT">N<span class="tip">KATBOOK × NCERT</span></button>
+        <button class="d3" type="button" aria-pressed="false" data-i="3" aria-label="KAMPUS and KSMACC">C<span class="tip">KAMPUS · KSMACC</span></button>
+        <button class="d4" type="button" aria-pressed="false" data-i="4" aria-label="USTUDY">U<span class="tip">USTUDY</span></button>
+      </nav>
     </div>
+  </div>
+</section>
 
-    <h2 class="display reveal" style="margin-top:96px">Beyond buildings.</h2>
-    <p class="lead reveal" style="--d:100ms">His curiosity did not stop at construction. He designed machines, wrote systems and gave the industry a common language for its materials.</p>
-    <div class="bento-d">
-      <article class="tile t-kwall reveal"><p class="mono">2014</p><h3>KWALL</h3><p>Lightweight hollow core wall panels, with machinery he designed to make different types of acoustic wall panels.</p><i class="ph ph-wall"></i></article>
-      <article class="tile reveal" style="--d:100ms"><i class="ph ph-presentation-chart"></i><h4>Sales and marketing software</h4><p>Real estate marketing and sales solutions.</p></article>
-      <article class="tile reveal" style="--d:200ms"><i class="ph ph-blueprint"></i><h4>Drawings and projects</h4><p>Digital drawing, project activity and software activity management platforms.</p></article>
-      <article class="tile t-wide reveal" style="--d:100ms"><i class="ph ph-barcode"></i><h4>A unique coding system</h4><p>One database and coding system for construction materials, machinery, tools, electrical materials, building equipment and auxiliaries.</p></article>
-<article class="tile t-wide t-edu reveal" style="--d:200ms"><i class="ph ph-graduation-cap"></i><p class="mono">Education · Since April 2023</p><h4>Ueducate Global</h4><p>Sarath founded UEducate Global Private Limited in Chennai in 2023. It makes KATBOOK, KAMPUS, KSMACC and USTUDY, and works with NCERT to bring the national textbooks into a digital format.</p><a class="tile-link" href="#education">See the NCERT partnership <i class="ph ph-arrow-up-right"></i></a></article>
+<!-- EDUCATION -->
+<section class="pp grid edu" id="education" data-nav="light">
+  <div class="pp-wrap">
+    <p class="script reveal">side quest <span class="spark"></span></p>
+    <div class="edu-board">
+      <figure class="file f1 drag reveal"><svg viewBox="0 0 92 76" aria-hidden="true"><path d="M4 14a8 8 0 0 1 8-8h22l8 9h38a8 8 0 0 1 8 8v47a8 8 0 0 1-8 8H12a8 8 0 0 1-8-8z" fill="#4aa8ee"/><rect x="4" y="22" width="84" height="50" rx="8" fill="#7cc4f8"/></svg><figcaption>katbook ✦</figcaption></figure>
+      <figure class="file f2 drag reveal" style="--d:80ms"><svg viewBox="0 0 92 76" aria-hidden="true"><path d="M4 14a8 8 0 0 1 8-8h22l8 9h38a8 8 0 0 1 8 8v47a8 8 0 0 1-8 8H12a8 8 0 0 1-8-8z" fill="#4aa8ee"/><rect x="4" y="22" width="84" height="50" rx="8" fill="#7cc4f8"/></svg><figcaption>kampus ✦</figcaption></figure>
+      <figure class="file f3 drag reveal" style="--d:160ms"><svg viewBox="0 0 92 76" aria-hidden="true"><path d="M4 14a8 8 0 0 1 8-8h22l8 9h38a8 8 0 0 1 8 8v47a8 8 0 0 1-8 8H12a8 8 0 0 1-8-8z" fill="#4aa8ee"/><rect x="4" y="22" width="84" height="50" rx="8" fill="#7cc4f8"/></svg><figcaption>ksmacc ✦</figcaption></figure>
+      <figure class="file f4 drag reveal" style="--d:240ms"><svg viewBox="0 0 92 76" aria-hidden="true"><path d="M4 14a8 8 0 0 1 8-8h22l8 9h38a8 8 0 0 1 8 8v47a8 8 0 0 1-8 8H12a8 8 0 0 1-8-8z" fill="#4aa8ee"/><rect x="4" y="22" width="84" height="50" rx="8" fill="#7cc4f8"/></svg><figcaption>ustudy ✦</figcaption></figure>
+      <img class="stk a sticker" src="assets/company/sticker-teacher.webp" alt="" loading="lazy">
+      <img class="stk b sticker" src="assets/company/sticker-kids.webp" alt="" loading="lazy">
+      <div class="selbox">
+        <div class="sel reveal"><h2 class="mega">teaching<br>a nation</h2><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="cursor"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 2l20 9-8.5 2.5L12 22z" fill="#8f73d6" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg><span>NCERT</span></span></div>
+      </div>
+      <div class="note n1 reveal" style="--r:-6deg"><b>250M</b>students the offline KATBOOKs should reach</div>
+      <div class="note l n2 reveal" style="--r:5deg;--d:100ms"><b>18</b>months planned for the national rollout</div>
+    </div>
+    <p class="edu-copy reveal">In August 2025 NCERT signed an MoU at its New Delhi headquarters to convert its textbooks into KATBOOKs: videos, 3D models, virtual labs, a translator, an audiobook and in book doubt clearing. Sarath's company, UEducate Global, makes them.
+      <span class="btns"><a class="pbtn" href="https://explorencertkatbook.com/?lang=en" target="_blank" rel="noopener">Explore NCERT KATBOOK ↗</a><a class="pbtn alt" href="https://apps.apple.com/in/app/ncert-katbook/id6753007971" target="_blank" rel="noopener">App Store ↗</a></span></p>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section class="pp press" id="press" data-nav="light">
+  <div class="pp-wrap">
+    <p class="script reveal">press <span class="spark"></span></p>
+    <h2 class="pp-h reveal" style="--d:80ms">in the <span class="hl-l">news.</span></h2>
+    <div class="press-grid">
+      <div class="win reveal">
+        <div class="win-bar"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i><span class="win-title">behindwoods-katbook-demo.mp4</span></div>
+        <figure class="yt">
+          <button class="yt-btn" type="button" data-yt="QN-MqjNQ-3E" aria-label="Play video: KatBook live demo with Sarath Kakumanu on Behindwoods Air"><img src="https://i.ytimg.com/vi/QN-MqjNQ-3E/hqdefault.jpg" alt="Thumbnail of the Behindwoods Air video on KATBOOK" loading="lazy"><span class="yt-play"><i class="ph ph-play"></i></span></button>
+          <figcaption><span class="mono">Behindwoods Air · Nov 2025 · 24 min</span><b>Traditional vs digital learning: KatBook live demo</b></figcaption>
+        </figure>
+      </div>
+      <div class="docs">
+        <a class="doc reveal" style="--d:80ms" href="https://smestreet.in/education/ncert-signs-mou-with-ueducate-to-transform-national-curriculum-into-interactive-digital-books-9684261" target="_blank" rel="noopener"><svg viewBox="0 0 56 70" aria-hidden="true"><path d="M6 4h30l14 14v46a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4z" fill="#fff" stroke="#111" stroke-width="2"/><path d="M36 4v14h14" fill="#d9c9f5" stroke="#111" stroke-width="2"/><rect x="10" y="38" width="30" height="5" rx="2" fill="#111"/><rect x="10" y="48" width="22" height="5" rx="2" fill="#111"/></svg><div><span class="mono">SMEStreet · 21 Aug 2025</span><b>NCERT signs MoU with UEducate to transform the national curriculum into interactive digital books</b></div><i class="ph ph-arrow-up-right"></i></a>
+        <a class="doc reveal" style="--d:160ms" href="https://education21.in/ncert-signs-mou-with-ueducate-to-convert-textbooks-into-interactive-digital-books/" target="_blank" rel="noopener"><svg viewBox="0 0 56 70" aria-hidden="true"><path d="M6 4h30l14 14v46a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4z" fill="#fff" stroke="#111" stroke-width="2"/><path d="M36 4v14h14" fill="#d9c9f5" stroke="#111" stroke-width="2"/><rect x="10" y="38" width="30" height="5" rx="2" fill="#111"/><rect x="10" y="48" width="22" height="5" rx="2" fill="#111"/></svg><div><span class="mono">Education21 · 19 Aug 2025</span><b>NCERT signs MoU with UEducate to convert textbooks into interactive digital books</b></div><i class="ph ph-arrow-up-right"></i></a>
+        <a class="doc reveal" style="--d:240ms" href="https://educationworld.in/education-briefs-49/" target="_blank" rel="noopener"><svg viewBox="0 0 56 70" aria-hidden="true"><path d="M6 4h30l14 14v46a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4z" fill="#fff" stroke="#111" stroke-width="2"/><path d="M36 4v14h14" fill="#d9c9f5" stroke="#111" stroke-width="2"/><rect x="10" y="38" width="30" height="5" rx="2" fill="#111"/><rect x="10" y="48" width="22" height="5" rx="2" fill="#111"/></svg><div><span class="mono">EducationWorld · 25 Sep 2025</span><b>Education briefs: NCERT and UEducate Global to digitise the curriculum in KATBOOK format</b></div><i class="ph ph-arrow-up-right"></i></a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- TERRITORY -->
-<section class="section terr" id="territory" data-nav="light">
-  <div class="wrap">
-    <p class="label reveal"><span class="mono">06</span>Territory</p>
-    <h2 class="display reveal" style="--d:100ms">Chennai, mapped one neighbourhood at a time.</h2>
-    <p class="lead reveal" style="--d:200ms">Eight corners of the city that shape his thinking. Coordinates are the real centre of each neighbourhood.</p>
-    <ul class="plots">
-      <li class="lot reveal"><figure class="lot-img"><img src="assets/places/mylapore.jpg" alt="Kapaleeshwarar Temple and its tank in Mylapore, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 01</span><i class="ph ph-corners-out"></i></div><div><h3>Mylapore</h3><p>Heritage streets where every title has a long history.</p><div class="c mono">13.0368° N, 80.2676° E</div></div></div></li>
-      <li class="lot reveal" style="--d:80ms"><figure class="lot-img"><img src="assets/places/tnagar.jpg" alt="Crowded shopping street in T. Nagar, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 02</span><i class="ph ph-corners-out"></i></div><div><h3>T. Nagar</h3><p>The densest commercial grid in the city.</p><div class="c mono">13.0418° N, 80.2341° E</div></div></div></li>
-      <li class="lot reveal" style="--d:160ms"><figure class="lot-img"><img src="assets/places/adyar.jpg" alt="Adyar river estuary, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 03</span><i class="ph ph-corners-out"></i></div><div><h3>Adyar</h3><p>Green, quiet and fiercely sought after.</p><div class="c mono">13.0012° N, 80.2565° E</div></div></div></li>
-      <li class="lot reveal" style="--d:240ms"><figure class="lot-img"><img src="assets/places/annanagar.jpg" alt="Anna Nagar Tower Park, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 04</span><i class="ph ph-corners-out"></i></div><div><h3>Anna Nagar</h3><p>Planned avenues and long term family demand.</p><div class="c mono">13.0850° N, 80.2101° E</div></div></div></li>
-      <li class="lot reveal"><figure class="lot-img"><img src="assets/places/guindy.jpg" alt="Green canopy of Guindy National Park, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 05</span><i class="ph ph-corners-out"></i></div><div><h3>Guindy</h3><p>Where industry, transit and offices meet.</p><div class="c mono">13.0067° N, 80.2206° E</div></div></div></li>
-      <li class="lot reveal" style="--d:80ms"><figure class="lot-img"><img src="assets/places/velachery.jpg" alt="Sunset over Velachery, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 06</span><i class="ph ph-corners-out"></i></div><div><h3>Velachery</h3><p>Fast growth, tight supply, steady rentals.</p><div class="c mono">12.9815° N, 80.2180° E</div></div></div></li>
-      <li class="lot reveal" style="--d:160ms"><figure class="lot-img"><img src="assets/places/porur.jpg" alt="Porur lake and flyover, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 07</span><i class="ph ph-corners-out"></i></div><div><h3>Porur</h3><p>The western gateway, built for new households.</p><div class="c mono">13.0382° N, 80.1565° E</div></div></div></li>
-      <li class="lot reveal" style="--d:240ms"><figure class="lot-img"><img src="assets/places/omr.jpg" alt="Evening traffic on Old Mahabalipuram Road, Chennai" loading="lazy"></figure><div class="lot-body"><div class="n mono"><span>PLOT 08</span><i class="ph ph-corners-out"></i></div><div><h3>OMR</h3><p>The IT corridor that redrew the map of Chennai.</p><div class="c mono">12.9010° N, 80.2279° E</div></div></div></li>
-    </ul>
+<section class="pp grid terr" id="territory" data-nav="light">
+  <div class="pp-wrap">
+    <p class="script reveal">places <span class="spark"></span></p>
+    <h2 class="pp-h reveal" style="--d:80ms">chennai, one neighbourhood at a <span class="hl-y">time.</span></h2>
+    <p class="lede reveal" style="--d:140ms">Eight corners of the city that shape his thinking. Drag the photos around. Coordinates are the real centre of each neighbourhood.</p>
+    <div class="scatter"><figure class="polaroid drag reveal" style="--d:0ms"><span class="tape"></span><img src="assets/places/mylapore.jpg" alt="Kapaleeshwarar Temple and its tank in Mylapore, Chennai" loading="lazy"><figcaption>mylapore.jpg</figcaption><small>13.0368° N, 80.2676° E</small></figure><figure class="polaroid drag reveal" style="--d:70ms"><span class="tape"></span><img src="assets/places/tnagar.jpg" alt="Crowded shopping street in T. Nagar, Chennai" loading="lazy"><figcaption>tnagar.jpg</figcaption><small>13.0418° N, 80.2341° E</small></figure><figure class="polaroid drag reveal" style="--d:140ms"><span class="tape"></span><img src="assets/places/adyar.jpg" alt="Adyar river estuary, Chennai" loading="lazy"><figcaption>adyar.jpg</figcaption><small>13.0012° N, 80.2565° E</small></figure><figure class="polaroid drag reveal" style="--d:210ms"><span class="tape"></span><img src="assets/places/annanagar.jpg" alt="Anna Nagar Tower Park, Chennai" loading="lazy"><figcaption>annanagar.jpg</figcaption><small>13.0850° N, 80.2101° E</small></figure><figure class="polaroid drag reveal" style="--d:0ms"><span class="tape"></span><img src="assets/places/guindy.jpg" alt="Green canopy of Guindy National Park, Chennai" loading="lazy"><figcaption>guindy.jpg</figcaption><small>13.0067° N, 80.2206° E</small></figure><figure class="polaroid drag reveal" style="--d:70ms"><span class="tape"></span><img src="assets/places/velachery.jpg" alt="Sunset over Velachery, Chennai" loading="lazy"><figcaption>velachery.jpg</figcaption><small>12.9815° N, 80.2180° E</small></figure><figure class="polaroid drag reveal" style="--d:140ms"><span class="tape"></span><img src="assets/places/porur.jpg" alt="Porur lake and flyover, Chennai" loading="lazy"><figcaption>porur.jpg</figcaption><small>13.0382° N, 80.1565° E</small></figure><figure class="polaroid drag reveal" style="--d:210ms"><span class="tape"></span><img src="assets/places/omr.jpg" alt="Evening traffic on Old Mahabalipuram Road, Chennai" loading="lazy"><figcaption>omr.jpg</figcaption><small>12.9010° N, 80.2279° E</small></figure></div>
     <p class="credits">Photos from Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Kapaleeshwarar_Temple,_Mylapore,_Chennai,_India.jpg" target="_blank" rel="noopener">Mylapore</a> by N. Vivekananthamoorthy (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Diwali_Urban_Shopping,_Thiyagaraja_Nagar,_Chennai.jpg" target="_blank" rel="noopener">T. Nagar</a> by Arunsarv (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:River_adyar_estuary,chennai,tamilnadu_-_panoramio.jpg" target="_blank" rel="noopener">Adyar</a> by rajaraman sundaram (CC BY 3.0) · <a href="https://commons.wikimedia.org/wiki/File:Anna_Nagar_Tower_Park_From_Entrance_20Jan2013.jpg" target="_blank" rel="noopener">Anna Nagar</a> by Rasnaboy (CC BY-SA 3.0) · <a href="https://commons.wikimedia.org/wiki/File:View_of_Guindy_National_Park,_Chennai.png" target="_blank" rel="noopener">Guindy</a> by Ara C (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Sunset_at_Velachery_Chennai.jpg" target="_blank" rel="noopener">Velachery</a> by Fioselvan (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Porur_Lake_and_flyover.jpg" target="_blank" rel="noopener">Porur</a> by The EnforcerOffice of the secret service (CC BY 3.0) · <a href="https://commons.wikimedia.org/wiki/File:Rajiv_Gandhi_IT_Expressway(OMR).jpg" target="_blank" rel="noopener">OMR</a> by Nazeem Fasil (CC BY-SA 4.0).</p>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section faq" id="faq" data-nav="light">
-  <div class="wrap">
-    <p class="label reveal"><span class="mono">07</span>Questions</p>
-    <h2 class="display reveal" style="--d:100ms">What people ask before they reach out.</h2>
-    <div class="faq-list reveal">
-      <details><summary>Who is Sarath Kakumanu?<i class="ph ph-plus"></i></summary><p>An architect by training, with a bachelor's from the University of Madras. He founded Pioneer Group in Chennai and later founded UEducate Global, which works with NCERT on digital textbooks.</p></details>
+<section class="pp faq" id="faq" data-nav="light">
+  <div class="pp-wrap">
+    <p class="script reveal">questions <span class="spark"></span></p>
+    <h2 class="pp-h reveal" style="--d:80ms">what people <span class="hl-l">ask.</span></h2>
+    <div class="win faqwin reveal">
+      <div class="win-bar"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i><span class="win-title">faq.txt</span></div>
+      <details open><summary>Who is Sarath Kakumanu?<i class="ph ph-plus"></i></summary><p>An architect by training, with a bachelor's from the University of Madras. He founded Pioneer Group in Chennai and later founded UEducate Global, which works with NCERT on digital textbooks.</p></details>
       <details><summary>What is KATBOOK?<i class="ph ph-plus"></i></summary><p>A digital book format from UEducate that wraps a textbook in concept videos, animations, 3D models, virtual labs, AI tools, a translator, a dictionary and an audiobook, with in book doubt clearing.</p></details>
       <details><summary>What is the NCERT partnership?<i class="ph ph-plus"></i></summary><p>In August 2025 NCERT signed an MoU with UEducate Global to convert its textbooks into KATBOOKs. Pilots begin in select states, followed by nationwide implementation over 18 months.</p></details>
       <details><summary>What did he build before education?<i class="ph ph-plus"></i></summary><p>Pioneer Group, with almost 3 million square feet of premium commercial and residential projects in Tamil Nadu and Andhra Pradesh, plus KWALL wall panels and construction software.</p></details>
-      <details><summary>What is Pioneer Group?<i class="ph ph-plus"></i></summary><p>One of the most respected real estate houses in Chennai. Sarath has been its Managing Director since March 1983.</p></details>
       <details><summary>What is KWALL?<i class="ph ph-plus"></i></summary><p>A lightweight hollow core wall panel he developed in 2014, along with the machinery to manufacture different types of acoustic wall panels.</p></details>
       <details><summary>How can I reach him?<i class="ph ph-plus"></i></summary><p>Connect with Sarath on LinkedIn and send a short note about your project, school or idea.</p></details>
     </div>
@@ -267,29 +226,26 @@
 </section>
 
 <!-- CONNECT -->
-<section class="section connect" id="connect" data-nav="dark">
-  <div class="wrap">
-    <p class="label reveal"><span class="mono">08</span>Connect</p>
-    <h2 class="mega-cta reveal" style="--d:100ms">Building a school, a project or an idea? Let's talk.</h2>
-    <div class="hero-cta reveal" style="--d:200ms">
-      <a class="btn btn-gold" href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i>Connect with Sarath</a>
-    </div>
-    <p class="risk reveal" style="--d:300ms">Free first conversation. No obligation.</p>
+<section class="pp grid talk" id="connect" data-nav="light">
+  <div class="pp-wrap">
+    <img class="stk a sticker" src="assets/company/sticker-phone.webp" alt="" loading="lazy">
+    <img class="stk b sticker" src="assets/company/sticker-student.webp" alt="" loading="lazy">
+    <p class="script reveal">connection. presence. <span class="spark"></span></p>
+    <h2 class="big reveal" style="--d:80ms">let's <span class="hl-y">talk</span></h2>
+    <p class="sub reveal" style="--d:140ms">There is a place for every idea. A school, a project or something nobody has built yet.</p>
+    <div class="btns reveal" style="--d:200ms"><a class="pbtn" href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i>Connect with Sarath</a><a class="pbtn alt" href="#top">Back to the journey ↑</a></div>
   </div>
 </section>
 </main>
 
-<footer data-nav="dark">
-  <div class="wrap foot">
-    <span>© 2026 Sarath Kakumanu. Chennai, India.</span>
-    <nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener">LinkedIn</a></nav>
-  </div>
-  <p class="foot-name" aria-hidden="true">Sarath Kakumanu</p>
+<footer class="pfoot" data-nav="dark">
+  <div class="pp-wrap"><span>made in Chennai, with too much filter coffee · © 2026 Sarath Kakumanu</span><nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://www.linkedin.com/in/ar-sarath-kakumanu-51269a45/" target="_blank" rel="noopener">LinkedIn</a></nav></div>
 </footer>
 
 <script src="https://unpkg.com/three@0.149.0/build/three.min.js"></script>
 <script src="build3d.js?v=8"></script>
-<script src="main.js?v=8"></script>
+<script src="main.js?v=10"></script>
+<script src="paper.js?v=1"></script>
 <script src="world.js?v=9"></script>
 <script src="scene.js?v=8"></script>
 </body>
