@@ -83,7 +83,8 @@
   let vw = innerWidth, vh = innerHeight, Wi = 0, Hi = 0;
   function measure() {
     vw = stage.clientWidth; vh = stage.clientHeight;
-    const k = Math.max(vw / IW, vh / IH); Wi = IW * k; Hi = IH * k;
+    // cover fit, with a 1.5% bleed so sub pixel rounding can never show an edge
+    const k = Math.max(vw / IW, vh / IH) * 1.015; Wi = IW * k; Hi = IH * k;
     cam.style.width = Wi + 'px'; cam.style.height = Hi + 'px';
   }
   const target = (c) => {
@@ -95,7 +96,9 @@
     const ta = target(a.c), tb = target(b.c);
     const dip = 1 - 0.16 * Math.sin(Math.PI * e);
     const zs = vw < 700 ? 0.78 : 1;
-    const za = Math.max(1, a.z * (a.z > 1 ? zs : 1)), zb = Math.max(1, b.z * (b.z > 1 ? zs : 1));
+    const cap = Math.max(1.25, 1.9 / (Wi / IW));            // never magnify the artwork beyond about 1.9x its native pixels
+    const fz = (z) => (z > 1 ? Math.max(1, Math.min(z * zs, cap)) : 1);
+    const za = fz(a.z), zb = fz(b.z);
     return { fx: lerp(a.fx, b.fx, e), fy: lerp(a.fy, b.fy, e), z: Math.exp(lerp(Math.log(za), Math.log(zb), e)) * dip, tx: lerp(ta[0], tb[0], e), ty: lerp(ta[1], tb[1], e) };
   };
   const still = (a) => mix(a, a, 0);
@@ -104,6 +107,7 @@
 
   function render() {
     queued = false;
+    if (stage.clientWidth !== vw || stage.clientHeight !== vh) measure();
     const span = root.offsetHeight - innerHeight;
     const rect = root.getBoundingClientRect();
     const inWorld = rect.bottom > 0 && rect.top < innerHeight;
@@ -177,6 +181,7 @@
   const queue = () => { if (!queued) { queued = true; requestAnimationFrame(render); } };
   addEventListener('scroll', queue, { passive: true });
   addEventListener('resize', () => { measure(); queue(); });
+  if ('ResizeObserver' in window) new ResizeObserver(() => { measure(); queue(); }).observe(stage);
   measure();
   if (art.complete) queue(); else art.addEventListener('load', queue);
   render();
