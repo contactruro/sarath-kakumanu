@@ -238,3 +238,28 @@ h1, h2, h3, .h2, .tagline-text, .stat b, .menu a, .plain h1, .hero-proof b, .quo
 .final { background: #0b1236; }
 .plot, .plot .fallback { background: #fff8e7; border-color: var(--brass); }
 .plot .fallback svg path, .plot .fallback svg circle { fill: #0b1236; }
+
+/* Pinned scroll stage: video and portrait share one layer */
+.stage { position: relative; height: 320vh; background: #000; }
+.stage-sticky { position: sticky; top: 0; height: 100svh; overflow: hidden; }
+.stage-sticky video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.stage .hero-shade { transition: none; }
+.stage .hero-inner { position: absolute; left: 0; right: 0; bottom: 0; will-change: transform, opacity, filter; }
+.stage .scrollcue { z-index: 3; }
+.arch { position: absolute; z-index: 1; left: 50%; bottom: 0; width: min(78vw, 520px); height: 70svh; border-radius: 9999px 9999px 0 0; background: #121b4d; border: 2px solid var(--brass); border-bottom: 0; transform: translate(-50%, 110%); will-change: transform; }
+.hero-portrait { position: absolute; z-index: 2; left: 50%; bottom: 0; height: 80svh; width: auto; max-width: none; transform: translate(-50%, 110%); will-change: transform; filter: drop-shadow(0 24px 48px rgba(0,0,0,.55)); pointer-events: none; }
+.intro { position: absolute; z-index: 3; left: 0; right: 0; top: 96px; opacity: 0; pointer-events: none; }
+.intro h2 { font-size: 36px; line-height: 40px; max-width: 680px; margin-top: var(--s-100); }
+.intro .sub { margin-top: var(--s-200); font-size: 18px; line-height: 28px; font-weight: 600; color: var(--ink); }
+.intro .sub span { font-size: 14px; line-height: 20px; font-weight: 500; color: var(--brass); letter-spacing: .08em; text-transform: uppercase; }
+@media (min-width: 900px) {
+  .arch { left: 70%; width: 460px; height: 78svh; }
+  .hero-portrait { left: 70%; height: 88svh; }
+  .intro { top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; }
+  .intro > * { max-width: 520px; }
+  .intro h2 { font-size: 60px; line-height: 1; }
+}
+@media (max-width: 899px) {
+  .hero-portrait { height: 60svh; }
+  .arch { height: 52svh; width: min(70vw, 420px); }
+}

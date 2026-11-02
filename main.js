@@ -58,3 +58,38 @@
   const v = $('.hero video');
   if (v && matchMedia('(prefers-reduced-motion: reduce)').matches) v.removeAttribute('autoplay'), v.pause();
 })();
+
+// Pinned stage: hero text exits, portrait rises over the same video, intro text arrives
+(() => {
+  const stage = document.querySelector('.stage');
+  if (!stage) return;
+  const heroText = document.getElementById('heroText'), portrait = document.getElementById('portrait'),
+        arch = document.getElementById('arch'), intro = document.getElementById('intro'),
+        cue = document.getElementById('cue'), shade = stage.querySelector('.hero-shade');
+  const clamp = (v) => Math.min(1, Math.max(0, v));
+  const easeOut = (t) => 1 - Math.pow(1 - t, 4);
+  let queued = false;
+  const render = () => {
+    queued = false;
+    const span = stage.offsetHeight - innerHeight;
+    const p = clamp(-stage.getBoundingClientRect().top / span);
+    const out = clamp(p / 0.3);
+    heroText.style.opacity = 1 - out;
+    heroText.style.transform = `translateY(${-out * 80}px)`;
+    heroText.style.filter = `blur(${out * 12}px)`;
+    heroText.style.visibility = out >= 1 ? 'hidden' : 'visible';
+    cue.style.opacity = 1 - out;
+    const a = easeOut(clamp((p - 0.12) / 0.4));
+    const b = easeOut(clamp((p - 0.22) / 0.4));
+    arch.style.transform = `translate(-50%, ${(1 - a) * 110}%)`;
+    portrait.style.transform = `translate(-50%, ${(1 - b) * 110}%)`;
+    const t = clamp((p - 0.55) / 0.25);
+    intro.style.opacity = t;
+    intro.style.transform = `translateY(${(1 - t) * 48}px)`;
+    shade.style.background = `rgba(6,10,31,${0.5 + 0.22 * clamp(p / 0.5)})`;
+  };
+  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(render); } };
+  addEventListener('scroll', queue, { passive: true });
+  addEventListener('resize', queue);
+  render();
+})();

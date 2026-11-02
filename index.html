@@ -44,7 +44,7 @@
 
 <main id="main">
 <!-- HERO -->
-<section class="hero" id="top">
+<section class="stage" id="top"><div class="stage-sticky">
   <video autoplay muted loop playsinline preload="auto" poster="assets/chennai-poster.jpg" aria-label="Aerial footage of Chennai">
     <source src="assets/chennai.mp4" type="video/mp4">
   </video>
@@ -54,7 +54,7 @@
     <rect width="100%" height="100%" fill="url(#g)"/>
   </svg>
   <div class="coords mono">13.0827° N<br>80.2707° E<br>CHENNAI</div>
-  <div class="wrap hero-inner">
+  <div class="wrap hero-inner" id="heroText">
     <p class="eyebrow reveal">Real estate founder, Chennai</p>
     <h1 class="reveal" style="--d:100ms;margin-top:16px">Chennai was built<br>one plot at a time.<br>He walked every one.</h1>
     <p class="sub reveal" style="--d:200ms">Sarath Kakumanu has spent his career on the ground across the city, from the old streets of Mylapore to the new corridors of OMR, turning land into places people live and work.</p>
@@ -68,28 +68,22 @@
       <div><b>426 km²</b><span>One city, one founder</span></div>
     </div>
   </div>
-  <span class="scrollcue">Scroll <i class="ph ph-arrow-down"></i></span>
-</section>
+  <span class="scrollcue" id="cue">Scroll <i class="ph ph-arrow-down"></i></span>
+  <div class="arch" id="arch" aria-hidden="true"></div>
+  <img class="hero-portrait" id="portrait" src="assets/sarath.png" alt="Sarath Kakumanu, Chennai real estate founder, in a dark blazer with arms crossed">
+  <div class="wrap intro" id="intro">
+    <p class="eyebrow">The man behind the map</p>
+    <h2>He touched every square of Chennai, then built an empire on it.</h2>
+    <p class="sub">Sarath Kakumanu<br><span>Founder · Chennai</span></p>
+  </div>
+</div></section>
 
 <!-- PORTRAIT STORY -->
 <section class="section story" id="story">
   <div class="wrap story-grid">
-    <div class="portrait-col">
-      <div class="plot reveal" id="plot">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-        <div class="frame">
-          <div class="fallback" aria-hidden="true">
-            <svg viewBox="0 0 120 120"><circle cx="60" cy="44" r="22" fill="#c8a24b"/><path d="M16 112c4-28 22-42 44-42s40 14 44 42z" fill="#c8a24b"/></svg>
-          </div>
-          <img src="assets/sarath.png" alt="Portrait of Sarath Kakumanu, founder, in a dark blazer with arms crossed" onerror="this.remove()">
-        </div>
-        <div class="plot-tag"><div><b>Sarath Kakumanu</b><span>Founder · Chennai</span></div><span class="mono">PLOT 01</span></div>
-      </div>
-      <p class="dim mono">Every square of the city</p>
-    </div>
     <div class="story-copy">
-      <p class="eyebrow reveal">The man behind the map</p>
-      <h2 class="h2 reveal" style="--d:100ms">He touched every square of Chennai, then built an empire on it.</h2>
+      <p class="eyebrow reveal">The ground he knows</p>
+      <h2 class="h2 reveal" style="--d:100ms">Not a report. Not a rumour. Years of walking the actual land.</h2>
       <p class="lead reveal" style="--d:200ms">Most developers study a city from a report. Sarath studied it on foot, plot by plot and street by street, until he knew which land was worth holding, which was worth building, and which was worth walking away from.</p>
       <div class="areas reveal" style="--d:300ms">
         <span class="chip"><i class="ph ph-map-pin"></i>Mylapore</span><span class="chip"><i class="ph ph-map-pin"></i>T. Nagar</span>
