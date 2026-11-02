@@ -87,7 +87,7 @@
   list.innerHTML = STOPS.map(s => `<li><p class="y mono">${s.year}</p><h3>${s.h}</h3><p>${s.t}</p></li>`).join('');
 
   const go = (i) => {
-    const sec = root.getBoundingClientRect().top + scrollY, span = root.offsetHeight - innerHeight;
+    const sec = root.getBoundingClientRect().top + scrollY, span = root.offsetHeight - stage.clientHeight;
     window.scrollTo({ top: sec + (stopStart[i] + 0.004) * span, behavior: reduce ? 'auto' : 'smooth' });
   };
   [...pins, ...dots].forEach(b => b.addEventListener('click', () => go(+b.dataset.stop)));
@@ -104,14 +104,14 @@
   // Sizing: the canvas always matches the stage, and the virtual artwork box covers it with a small bleed
   let vw = 0, vh = 0, Wi = 0, Hi = 0, dpr = 1;
   function measure() {
-    vw = stage.clientWidth; vh = stage.clientHeight; dpr = Math.min(window.devicePixelRatio || 1, 2);
+    vw = stage.clientWidth; vh = stage.clientHeight; dpr = Math.min(window.devicePixelRatio || 1, vw < 700 ? 1.5 : 2);
     canvas.width = Math.round(vw * dpr); canvas.height = Math.round(vh * dpr);
     const k = Math.max(vw / IW, vh / IH) * 1.03; Wi = IW * k; Hi = IH * k;
   }
   const target = (c) => {
     const wide = vw >= 900;
-    if (c === 'card') return wide ? [vw * 0.63, vh * 0.42] : [vw * 0.5, vh * 0.3];
-    if (c === 'rev') return [vw * 0.5, vh * 0.52];          // dead centre, a little below the nav
+    if (c === 'card') return wide ? [vw * 0.63, vh * 0.42] : [vw * 0.5, vh * 0.33];
+    if (c === 'rev') return vw < 700 ? [vw * 0.5, vh * 0.6] : [vw * 0.5, vh * 0.52];          // dead centre, a little below the nav
     return [vw * 0.5, vh * 0.5];
   };
   const mix = (a, b, e) => {
@@ -120,7 +120,7 @@
     const zs = vw < 700 ? 0.78 : 1;
     const px = Wi / IW;
     const fz = (st) => {
-      if (st.fit) return Math.max(1, (st.fit * vh) / (REAL.h * (Hi / IH)));   // zoom so the whole figure fits the screen
+      if (st.fit) return Math.max(1, (st.fit * (vw < 700 ? (st.c === 'rev' ? 0.8 : 0.6) : 1) * vh) / (REAL.h * (Hi / IH)));   // zoom so the whole figure fits the screen
       return st.z > 1 ? Math.max(1, Math.min(st.z * zs, Math.max(1.25, (st.cap || 3.4) / px))) : 1;
     };
     const za = fz(a), zb = fz(b);
@@ -162,7 +162,7 @@
     queued = false;
     if (stage.clientWidth !== vw || stage.clientHeight !== vh) measure();
     if (Math.abs(nightK - nightTo) > 0.002) { nightK += (nightTo - nightK) * 0.14; queue(); } else nightK = nightTo;
-    const span = root.offsetHeight - innerHeight;
+    const span = root.offsetHeight - stage.clientHeight;
     const rect = root.getBoundingClientRect();
     const inWorld = rect.bottom > 0 && rect.top < innerHeight;
 
@@ -238,6 +238,7 @@
 
   addEventListener('scroll', queue, { passive: true });
   addEventListener('resize', () => { measure(); queue(); });
+  if (window.visualViewport) visualViewport.addEventListener('resize', () => { measure(); queue(); });
   if ('ResizeObserver' in window) new ResizeObserver(() => { measure(); queue(); }).observe(stage);
   measure();
   render();

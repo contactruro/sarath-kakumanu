@@ -1,6 +1,6 @@
 /* Illustrated world hero: a camera that flies through the illustration, one landmark per chapter. Flat colours only. */
-.world { position: relative; height: calc(100svh + 700vh); background: #1b1230; }
-.world-sticky { position: sticky; top: 0; height: 100svh; overflow: hidden; color: #f6f1e3; background: #1b1230; }
+.world { position: relative; height: calc(100lvh + 700vh); background: #1b1230; }
+.world-sticky { position: sticky; top: 0; height: 100svh; height: 100dvh; min-height: 100svh; overflow: hidden; color: #f6f1e3; background: #1b1230; }
 /* Pins are zero size anchors that JS moves onto their landmark every frame */
 .w-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .pins { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
@@ -35,7 +35,7 @@
 .w-name span { font-size: clamp(56px, 11vw, 190px); line-height: .9; letter-spacing: -.03em; color: #f6f1e3; will-change: transform; }
 .w-name .l { justify-self: end; text-align: right; }
 .w-name .r { justify-self: start; grid-column: 3; }
-@media (max-width: 799px) { .w-name { grid-template-columns: 1fr; align-content: start; justify-items: center; padding-top: 14svh; } .w-name span { font-size: 17vw; grid-column: 1; justify-self: center; text-align: center; } }
+@media (max-width: 799px) { .w-name { grid-template-columns: 1fr; align-content: start; justify-items: center; padding-top: 17svh; } .w-name span { font-size: 14vw; grid-column: 1; justify-self: center; text-align: center; } }
 
 /* Chapter card */
 .w-card { position: absolute; z-index: 6; left: var(--s-300); bottom: var(--s-300); width: min(440px, calc(100% - 48px)); padding: var(--s-300); border-radius: 16px; opacity: 0; background: rgba(255,255,255,.8); backdrop-filter: blur(28px) saturate(180%); -webkit-backdrop-filter: blur(28px) saturate(180%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 24px 64px rgba(0,0,0,.35); color: #131209; will-change: transform, opacity; }
@@ -84,3 +84,4 @@
 }
 
 @media (max-width: 767px) { .w-title { top: 132px; } .w-cue { width: calc(100% - 32px); justify-content: center; text-align: center; } }
+@media (max-width: 799px) { .w-name .l, .w-name .r { grid-column: 1; justify-self: center; text-align: center; } .w-name { row-gap: 2px; } }
