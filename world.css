@@ -33,12 +33,12 @@
 .w-cue i { animation: nudge 2.4s var(--ease) infinite; }
 
 /* Reveal of the real portrait */
-.w-name { position: absolute; inset: 0; z-index: 4; margin: 0; padding-inline: var(--pad); display: grid; grid-template-columns: 1fr minmax(220px, 31vw) 1fr; align-items: center; pointer-events: none; font-family: var(--display); font-weight: 400; opacity: 0; }
+.w-name { position: absolute; inset: 0; z-index: 4; margin: 0; padding-inline: var(--pad); display: grid; grid-template-columns: 1fr minmax(200px, 24vw) 1fr; align-items: center; pointer-events: none; font-family: var(--display); font-weight: 400; opacity: 0; }
 .w-name span { font-size: clamp(56px, 11vw, 190px); line-height: .9; letter-spacing: -.03em; color: #f6f1e3; will-change: transform; }
 .w-name .l { justify-self: end; text-align: right; }
 .w-name .r { justify-self: start; grid-column: 3; }
-.w-portrait { position: absolute; z-index: 5; left: 50%; bottom: 0; height: 84svh; width: auto; max-width: none; transform: translate(-50%, 105%); pointer-events: none; will-change: transform; filter: drop-shadow(0 24px 48px rgba(0,0,0,.5)); }
-@media (max-width: 799px) { .w-name { grid-template-columns: 1fr; align-content: start; justify-items: center; padding-top: 14svh; } .w-name span { font-size: 17vw; grid-column: 1; justify-self: center; text-align: center; } .w-portrait { height: 62svh; } }
+.w-portrait { position: absolute; z-index: 5; left: 50%; bottom: 52px; height: 88svh; width: auto; max-width: none; transform: translate(-50%, 105%); pointer-events: none; will-change: transform; filter: drop-shadow(0 24px 48px rgba(0,0,0,.5)); }
+@media (max-width: 799px) { .w-name { grid-template-columns: 1fr; align-content: start; justify-items: center; padding-top: 14svh; } .w-name span { font-size: 17vw; grid-column: 1; justify-self: center; text-align: center; } .w-portrait { height: 76svh; bottom: 0; } }
 
 /* Chapter card */
 .w-card { position: absolute; z-index: 6; left: var(--s-300); bottom: var(--s-300); width: min(440px, calc(100% - 48px)); padding: var(--s-300); border-radius: 16px; opacity: 0; background: rgba(255,255,255,.8); backdrop-filter: blur(28px) saturate(180%); -webkit-backdrop-filter: blur(28px) saturate(180%); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 24px 64px rgba(0,0,0,.35); color: #131209; will-change: transform, opacity; }

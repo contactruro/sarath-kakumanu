@@ -83,8 +83,9 @@
   let vw = innerWidth, vh = innerHeight, Wi = 0, Hi = 0;
   function measure() {
     vw = stage.clientWidth; vh = stage.clientHeight;
-    // cover fit, with a 1.5% bleed so sub pixel rounding can never show an edge
-    const k = Math.max(vw / IW, vh / IH) * 1.015; Wi = IW * k; Hi = IH * k;
+    // cover fit against the largest area the stage could ever occupy, plus a 3% bleed, so no edge can ever show
+    const cw = Math.max(vw, document.documentElement.clientWidth, innerWidth), ch = Math.max(vh, innerHeight);
+    const k = Math.max(cw / IW, ch / IH) * 1.03; Wi = IW * k; Hi = IH * k;
     cam.style.width = Wi + 'px'; cam.style.height = Hi + 'px';
   }
   const target = (c) => {
